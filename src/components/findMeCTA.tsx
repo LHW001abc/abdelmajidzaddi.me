@@ -15,18 +15,6 @@ const FindMeCTA = () => {
           <Link href={socials.linkedin} target={"_blank"} title={"LinkedIN"}>
             <img src={"/logo/linkedin.gif"} alt={"LinkedIn"} width={"32px"} height={"32px"}/>
           </Link>
-          <Link href={socials.instagram} target={"_blank"} title={"Instagram"}>
-            <img src={"/logo/instagram.gif"} alt={"Instagram"} width={"32px"} height={"32px"}/>
-          </Link>
-          <Link href={socials.facebook} target={"_blank"} title={"Facebook"}>
-            <img src={"/logo/facebook.gif"} alt={"Facebook"} width={"32px"} height={"32px"}/>
-          </Link>
-          <Link href={socials.twitter} target={"_blank"} title={"X"}>
-            <img src={"/logo/x.png"} alt={"X"} width={"32px"} height={"32px"}/>
-          </Link>
-          <Link href={socials.youtube} target={"_blank"} title={"YouTube"}>
-            <img src={"/logo/youtube.gif"} alt={"YouTube"} width={"32px"} height={"32px"}/>
-          </Link>
         </div>
       </div>
     </div>

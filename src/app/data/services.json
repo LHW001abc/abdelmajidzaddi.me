@@ -14,79 +14,78 @@
     "tags": ["web", "full-stack"]
   },
   {
-    "name": "API Development & Integration",
-    "slug": "api-development",
-    "excerpt": "Seamless API development and integration for data-driven applications.",
-    "overview": "I build robust and scalable APIs for seamless communication between applications and services. Whether you're looking to expose data or integrate with third-party services, I ensure the development of secure and efficient APIs to enhance your app’s functionality.",
+    "name": "Custom AI/ML Model Development",
+    "slug": "ai-ml-development",
+    "excerpt": "Developing tailored AI/ML models for your specific business needs.",
+    "overview": "I design and implement custom machine learning and AI models that drive innovation and efficiency. From predictive analytics to recommendation systems, I offer solutions that are both effective and adaptable to your unique requirements.",
     "features": [
-      "RESTful API development",
-      "Secure data handling with OAuth2/JWT authentication",
-      "Third-party API integration (e.g. payment gateways, social media)",
-      "Microservices architecture",
-      "Data exchange between applications",
-      "API documentation and testing"
+      "Custom AI/ML model design",
+      "Training and deployment of AI models",
+      "Integration with existing systems",
+      "Data preprocessing and feature engineering",
+      "Performance monitoring and optimization"
     ],
-    "icon": "/icons/api-development.svg",
-    "tags": ["api", "backend"]
+    "icon": "/icons/ai-ml-development.svg",
+    "tags": ["ai", "ml"]
   },
   {
-    "name": "Cloud & DevOps Solutions",
-    "slug": "cloud-devops",
-    "excerpt": "Optimize your infrastructure with cloud-native and DevOps practices.",
-    "overview": "I offer cloud solutions that help businesses scale efficiently. From setting up continuous integration/continuous delivery (CI/CD) pipelines to managing Docker containers and Kubernetes clusters, I ensure your infrastructure is optimized for performance and security.",
+    "name": "Natural Language Processing (NLP) Solutions",
+    "slug": "nlp-solutions",
+    "excerpt": "Leveraging NLP to make sense of unstructured data and enhance user interactions.",
+    "overview": "I develop NLP-powered solutions, including chatbots, text analysis tools, and sentiment analysis systems. These applications enable businesses to better understand and interact with their customers through intelligent language processing.",
     "features": [
-      "CI/CD pipeline setup",
-      "Containerization with Docker",
-      "Kubernetes cluster management",
-      "Monitoring and logging solutions",
-      "Automated testing and deployment"
+      "Text classification and sentiment analysis",
+      "Chatbot development",
+      "Speech-to-text and text-to-speech systems",
+      "Named entity recognition",
+      "Machine translation"
     ],
-    "icon": "/icons/cloud-devops.svg",
-    "tags": ["cloud", "devops"]
+    "icon": "/icons/nlp-solutions.svg",
+    "tags": ["nlp", "ai"]
   },
   {
-    "name": "E-commerce Development",
-    "slug": "ecommerce-development",
-    "excerpt": "Building custom e-commerce solutions for seamless online shopping experiences.",
-    "overview": "I specialize in developing e-commerce platforms that are tailored to your business needs. From customizing existing platforms to building from scratch, I provide solutions that are secure, scalable, and user-friendly to help you grow your online business.",
+    "name": "Computer Vision Projects",
+    "slug": "computer-vision",
+    "excerpt": "Empowering applications with visual data processing and analysis.",
+    "overview": "I create computer vision solutions that analyze and interpret visual data. From object detection to image recognition, these systems are designed to meet your specific needs, ensuring accuracy and reliability.",
     "features": [
-      "Custom e-commerce platform development",
-      "Payment gateway integration",
-      "Product catalog and inventory management",
-      "User-friendly shopping cart and checkout process",
-      "Secure transactions with SSL encryption"
+      "Object detection and tracking",
+      "Image and video recognition",
+      "Facial recognition systems",
+      "Augmented reality applications",
+      "Integration with IoT devices"
     ],
-    "icon": "/icons/ecommerce-development.svg",
-    "tags": ["web", "full-stack"]
+    "icon": "/icons/computer-vision.svg",
+    "tags": ["computer-vision", "ai"]
   },
   {
-    "name": "Mobile App Development",
-    "slug": "mobile-development",
-    "excerpt": "Creating native and cross-platform mobile applications for iOS and Android.",
-    "overview": "I develop mobile applications that are tailored to your business requirements. Whether you need a native app for iOS or Android or a cross-platform app that works on multiple devices, I provide custom solutions that are user-friendly, secure, and scalable.",
+    "name": "Speech Recognition and Voice Applications",
+    "slug": "speech-recognition",
+    "excerpt": "Enhancing applications with voice-enabled technologies.",
+    "overview": "I build voice-enabled applications, including speech recognition and voice assistants, to improve user experience and accessibility. These solutions leverage cutting-edge algorithms for accurate and efficient voice interaction.",
     "features": [
-      "Native app development for iOS and Android",
-      "Cross-platform app development with React Native",
-      "User-friendly UI/UX design",
-      "Secure data handling and storage",
-      "Integration with third-party services (e.g. social media, payment gateways)"
+      "Speech-to-text applications",
+      "Voice assistant development",
+      "Integration with smart devices",
+      "Real-time transcription",
+      "Multi-language support"
     ],
-    "icon": "/icons/mobile-development.svg",
-    "tags": ["mobile", "full-stack"]
+    "icon": "/icons/speech-recognition.svg",
+    "tags": ["speech", "ai"]
   },
   {
-    "name": "Database Design & Optimization",
-    "slug": "database-design",
-    "excerpt": "Efficient database solutions for optimal performance and scalability.",
-    "overview": " I design and optimize databases that handle high loads and large amounts of data. From schema design to query optimization, I ensure your database is both efficient and scalable to meet growing demands.",
+    "name": "Automation with AI",
+    "slug": "ai-automation",
+    "excerpt": "Streamlining business processes with AI-driven automation.",
+    "overview": "I provide AI-powered automation solutions that enhance efficiency and reduce costs. From automating routine tasks to developing intelligent workflows, I ensure your business can focus on what matters most.",
     "features": [
-      "Relational and non-relational database design",
-      "Advanced query optimization for performance",
-      "Data indexing and normalization",
-      "Database migration and scaling",
-      "Data backup and recovery solutions"
+      "Workflow automation",
+      "Predictive analytics",
+      "Robotic process automation (RPA)",
+      "Data-driven decision-making",
+      "Integration with existing tools"
     ],
-    "icon": "/icons/database-design.svg",
-    "tags": ["database", "backend"]
+    "icon": "/icons/ai-automation.svg",
+    "tags": ["automation", "ai"]
   }
 ]

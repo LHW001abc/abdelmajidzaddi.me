@@ -1,10 +1,10 @@
 import {Metadata} from "next";
 
 export const metadata: Metadata = {
-  title: "Ismail ZAHIR . Software Engineer",
-  authors: [{ name: 'Ismail ZAHIR'}],
-  description: "I'm Ismail ZAHIR, a Software Engineering and Computer Systems Integration student with a strong foundation in software engineering. I'm passionate about innovation and love exploring blockchain and artificial intelligence. Join me in creating exceptional software experiences and embracing the potential of technology.",
-  keywords: ["Ismail ZAHIR", "Software Engineer", "Blockchain", "Artificial Intelligence", "Software Engineering", "Computer Systems Integration"],
+  title: "Abdelmajid ZADDI . Data Scietist & Software Engineer",
+  authors: [{ name: 'Ismail ZAHIR'}, { name: 'Abdelmajid ZADDI'}],
+  description: "I'm Abdelmajid ZADDI, a Software Engineering and Computer Systems Integration student with a strong foundation in software engineering. I'm passionate about innovation and love exploring blockchain and artificial intelligence. Join me in creating exceptional software experiences and embracing the potential of technology.",
+  keywords: ["Abdelmajid ZADDI", "Software Engineer", "Blockchain", "Artificial Intelligence", "Software Engineering", "Computer Systems Integration"],
   icons: [
     {
       url: "/profile.svg",
@@ -31,16 +31,12 @@ export const resumes = {
 }
 
 export const contact = {
-  email: "ismailza407@gmail.com",
-  phone: "+212635791476",
-  address: "Sale, Rabat-Sale-Kenitra, Morocco",
+  email: "abdelmajidzaddi088@gmail.com",
+  phone: "+212634707974",
+  address: "Mohammedia, Casablanca-Settat, Morocco",
 }
 
 export const socials = {
-  github: "https://github.com/ismailza",
-  linkedin: "https://linkedin.com/in/ismailzahir01",
-  instagram: "https://instagram.com/ismailzahir01",
-  facebook: "https://facebook.com/ismailzahir01",
-  twitter: "https://x.com/ismailzahir01",
-  youtube: "https://youtube.com/ismailzahir01",
+  github: "https://github.com/LHW001abc",
+  linkedin: "https://www.linkedin.com/in/abdelmajid-zaddi-694b2b290/",
 };

@@ -1,85 +1,46 @@
 [
   {
-    "title": "Software Engineer",
+    "title": "NLP Engineering Intern",
     "company": {
-      "name": "Dr Maroc",
-      "url": "https://www.drmaroc.com",
-      "logo": "/logo/drmaroc.png",
+      "name": "3D SMART FACTORY",
       "location": "Rabat, Morocco"
     },
     "type": "Hybrid",
-    "startedAt": "Jul 2024",
-    "endedAt": "Present",
+    "startedAt": "Avril 2023 ",
+    "endedAt": "Juillet 2023",
     "employment_type": "Full-time",
-    "skills": ["Spring Boot", "Spring Security", "Spring Data", "JUnit", "React Js", "PostgresSQL", "GitFlow", "Docker", "CI/CD"],
-    "overview": "Developed and maintained the Dr Maroc platform for online medical appointments and patient management desktop application."
+    "skills": ["Streamlit", "Pandas", "Numpy", "Sk-learn", "React Js", "Python", "PyTorch", "Docker"]
+
   },
   {
-    "title": "Full Stack Developer",
-    "type": "Remote",
-    "startedAt": "Jul 2024",
-    "endedAt": "Jul 2024",
-    "employment_type": "Freelance",
-    "skills": ["Laravel", "Blade", "MySQL", "CI/CD"],
-    "overview": "Developed an organic products marketplace."
+    "title": "AI Developer",
+    "type": "Hybrid",
+    "startedAt": "Avr 2024",
+    "endedAt": "Present",
+    "skills": ["Python", "OprnCV", "MySQL", "YOLO Framework","TensorFlow/PyTorc"]
   },
   {
-    "title": "Software Engineer Intern",
+    "title": "AI Developer & GenAI Intern",
     "company": {
-      "name": "GTEL",
-      "url": "https://www.gtel-dev.com",
-      "logo": "/logo/gtel.jpeg",
+      "name": "Cash PLus",
+      "url": "https://www.cashplus.ma/",
       "location": "Boulevard Emile Zola, Casablanca, Morocco"
     },
     "type": "Hybrid",
     "startedAt": "Apr 2024",
     "endedAt": "Jun 2024",
     "employment_type": "Internship",
-    "skills": ["Laravel", "PHPUnit", "MySQL", "CI/CD"],
-    "overview": "Developed an online platform for Afriworks to showcase services and projects with a service quote request feature."
+    "skills": ["Python", "LangChain", "ChrmaDB", "CI/CD","Huggingface"]
   },
   {
-    "title": "Software Engineer Intern",
+    "title": " Machine Learning  Developer",
     "company": {
-      "name": "GTEL",
-      "url": "https://www.gtel-dev.com",
-      "logo": "/logo/gtel.jpeg",
-      "location": "Boulevard Emile Zola, Casablanca, Morocco"
+      "name": "ADAONE",
+      "location": "France"
     },
-    "type": "Hybrid",
+    "type": "Remote Job",
     "startedAt": "Apr 2024",
-    "endedAt": "Jun 2024",
-    "employment_type": "End Of Year Internship",
-    "skills": ["Laravel", "PHPUnit", "MySQL", "CI/CD"],
-    "overview": "Developed a comprehensive training management platform for GTEL Academy, focusing on course management, user registration, and certification processes. Implemented a DevOps approach with Git Flow and integrated event and blog management features."
-  },
-  {
-    "title": "Software Engineer Intern",
-    "company": {
-      "name": "Creations Design Studio",
-      "url": "www.linkedin.com/company/creations-design-studio",
-      "logo": "/logo/creations-design-studio.jpeg",
-      "location": "Villeneuve-St.-Georges, Île-de-France, France"
-    },
-    "type": "Remote",
-    "startedAt": "Oct 2023",
-    "endedAt": "Jan 2024",
-    "employment_type": "Internship",
-    "skills": ["Laravel", "React", "Rest API", "MySQL"],
-    "overview": "Contributed to the development of a web application for seamless event organization between clients and service providers."
-  },
-  {
-    "title": "Software Engineer Intern",
-    "company": {
-      "name": "FST",
-      "url": "https://www.fste-umi.ac.ma",
-      "logo": "/logo/fste.jpeg",
-      "location": "Errachidia, Morocco"
-    },
-    "startedAt": "May 2022",
-    "endedAt": "Jun 2022",
-    "employment_type": "End Of Study Internship",
-    "skills": ["PHP", "MySQL", "HTML/CSS/JS", "Ajax"],
-    "overview": "Developed a web application promoting tourism in the Drâa Tafilalet region, facilitating hotel reservations and enhancing tourism services."
+    "endedAt": "Present",
+    "skills": ["Python", "AWS", "Flask", "CI/CD"]
   }
 ]

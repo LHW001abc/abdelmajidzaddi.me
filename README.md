@@ -1,5 +1,5 @@
-# Ismail ZAHIR - Portfolio Website
-[![Live Preview](https://img.shields.io/badge/Live-Preview-blue)](https://ismailzahir.com)
+# Abdelmajid ZADDI - Portfolio Website
+[![Live Preview](https://img.shields.io/badge/Live-Preview-blue)](https://abdelmajidzaddi.me)
 
 Welcome to my personal portfolio repository! This project showcases my skills, services, and projects as a software engineer and system integrator. It's built using modern web technologies and highlights some of the most exciting work I've done, along with the services I offer.
 

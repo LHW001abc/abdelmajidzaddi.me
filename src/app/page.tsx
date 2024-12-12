@@ -103,8 +103,8 @@ export default function Home() {
             <button
               className="absolute flex -bottom-8 right-6 lg:-bottom-0 lg:-right-24 w-auto h-16 md:h-20 dark:bg-grey-800 place-items-center shadow-blue-500 shadow-md bg-white items-center text-gray-700 dark:text-gray-300 justify-center gap-x-3 text-sm sm:text-base dark:bg-gray-900 dark:border-gray-700 dark:hover:bg-gray-800 rounded-3xl hover:bg-blue-50 duration-300 transition-colors border px-8 py-2">
               <div className="text-start">
-                <span>Software Engineer</span>
-                <p className="text-sm text-gray-500">DevOps Enthusiast</p>
+                <span>Data Scientist</span>
+                <p className="text-sm text-gray-500">Software Engineer</p>
               </div>
             </button>
           </div>
@@ -112,13 +112,13 @@ export default function Home() {
           <div className="w-full lg:w-1/2 mt-24 md:mt-16 lg:mt-0">
             <div className="lg:max-w-lg">
               <Title textClass="text-3xl font-semibold text-gray-800 dark:text-gray-100 lg:text-4xl">
-                {`Hi, I'm Ismail ZAHIR`}
+                {`Hi, I'm Abdelmajid ZADDI`}
               </Title>
               <h3 className="mt-2 text-2xl font-semibold text-gray-100">
-                <span className="text-blue-400">Software Engineer</span>
+                <span className="text-blue-400">Data Scientist & Software Engineer</span>
               </h3>
               <p className="mt-3 text-gray-600 dark:text-gray-400">
-                Join me in creating exceptional software experiences and embracing the potential of technology.
+                {`I'm a software engineer and data scientist with a passion for developing innovative software solutions.`}
               </p>
               <div className="mt-6 space-x-4 flex justify-start">
                 <button onClick={() => setResumeModalOpen(true)}
@@ -141,7 +141,7 @@ export default function Home() {
       <section id="about" className="max-w-6xl px-6 py-10 mx-auto">
         <h4 className="text-xl font-medium text-blue-500 dark:text-blue-400">About me</h4>
         <Title>
-          Passionate Software Engineer
+          Passionate Data Scientist & Software Engineer
         </Title>
         <main className="relative z-20 w-full mt-8 md:flex md:items-center xl:mt-12">
           <div className="absolute w-full bg-blue-100 dark:bg-gray-700 -z-10 md:h-96 rounded-2xl"></div>
@@ -149,21 +149,20 @@ export default function Home() {
             className="w-full p-6 bg-blue-100 dark:bg-gray-700 md:flex md:items-center rounded-2xl md:bg-transparent dark:md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
             <img
               className="h-24 w-24 md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl"
-              src="/ismailzahir.jpg"
-              alt="client photo"
+              src="/abdelmajidzaddi.jpg"
+              alt="photo"
               loading="lazy"
             />
             <div className="mt-2 md:mx-6">
               <div>
-                <p className="text-xl font-medium tracking-tight text-gray-800 dark:text-white">Ismail ZAHIR</p>
-                <p className="text-blue-700 dark:text-blue-200 ">A passionate Software Engineer from Morocco</p>
+                <p className="text-xl font-medium tracking-tight text-gray-800 dark:text-white">Abdelmajid ZADDI</p>
+                <p className="text-blue-700 dark:text-blue-200 ">A passionate Data Scientist and Software Engineer from Morocco</p>
               </div>
               <p className="mt-4 text-lg leading-relaxed text-gray-800 dark:text-white md:text-xl">
-              {`I'm Ismail ZAHIR, a Software Engineering and Computer Systems Integration student with a strong
-                  foundation in software engineering.`}
+              {`I'm Abdelmajid ZADDI, a software engineer and data scientist with a passion for developing innovative software solutions. I have experience working with various programming languages and technologies, including Python, Java, JavaScript, and SQL. I'm passionate about innovation and love exploring blockchain and artificial intelligence.`}
               </p>
               <p className="mt-4 text-lg leading-relaxed text-gray-800 dark:text-white md:text-xl">
-                {`I'm passionate about innovation and love exploring blockchain and artificial intelligence. Join me in creating exceptional software experiences and embracing the potential of technology.`}
+                Join me in creating exceptional software experiences and embracing the potential of technology.
               </p>
             </div>
           </div>

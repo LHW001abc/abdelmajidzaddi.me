@@ -1,22 +1,32 @@
 [
   {
-    "name": "Vue.js",
-    "icon": "/icons/vuejs.gif",
+    "name": "Machine Learning",
+    "icon": "/placeholder.png",
     "featured": true
   },
   {
-    "name": "React",
-    "icon": "/icons/react.gif",
+    "name": "TensorFlow",
+    "icon": "/icons/tensorflow.png",
     "featured": true
   },
   {
-    "name": "Node.js",
-    "icon": "/icons/nodejs.png",
+    "name": "Computer Vision",
+    "icon": "/placeholder.png",
     "featured": true
   },
   {
-    "name": "Laravel",
-    "icon": "/icons/laravel.png",
+    "name": "LLM",
+    "icon": "/placeholder.png",
+    "featured": true
+  },
+  {
+    "name": "NLP",
+    "icon": "/placeholder.png",
+    "featured": true
+  },
+  {
+    "name": "Deep learning",
+    "icon": "/placeholder.png",
     "featured": true
   },
   {
@@ -37,7 +47,7 @@
   {
     "name": "Neo4j",
     "icon": "/icons/neo4j.png",
-    "featured": true
+    "featured": false
   },
   {
     "name": "Solidity",
@@ -57,17 +67,17 @@
   {
     "name": "MySQL",
     "icon": "/icons/mysql.png",
-    "featured": true
+    "featured": false
   },
   {
     "name": "SQL",
     "icon": "/icons/sql.png",
-    "featured": false
+    "featured": true
   },
   {
     "name": "PHP",
     "icon": "/icons/php.png",
-    "featured": true
+    "featured": false
   },
   {
     "name": "UML",

@@ -51,102 +51,120 @@
     "github": "https://github.com/NexoWorld"
   },
   {
-    "title": "ZStore.Net",
-    "slug": "zstore-net",
-    "excerpt": "ZStore.Net is a modern e-commerce platform designed to streamline online retail operations, offering seamless product management and customer engagement features.",
-    "overview": "Built with ASP.Net Core, ZStore.Net aims to provide a robust and scalable solution for online stores, ensuring smooth operations from product listings to order management. The platform leverages MVC architecture for a clean separation of concerns and Entity Framework to simplify database interactions with MS SQL. Through CI/CD pipelines, ZStore.Net supports continuous development and deployment for quick feature releases and bug fixes.",
-    "image": "/projects/zstore-net.svg",
-    "category": "Web Application",
+    "title": "Automatic Image Captioning",
+    "slug": "automatic-image-captioning",
+    "excerpt": "An AI-powered system for generating descriptive captions for images",
+    "overview": "A system designed to automatically generate descriptive captions for images using advanced AI techniques",
+    "image": "/placeholder.svg?height=200&width=300",
+    "category": "Data Scientist",
     "timeline": {
-      "start": "Oct 2024",
+      "start": "2024",
       "end": "Present"
     },
     "features": [
-      "Product Management: Easily manage product listings, categories, and inventory.",
-      "Order Management: Track customer orders from placement to delivery.",
-      "User Authentication: Secure login and registration processes with role-based access control."
+      "Image analysis and processing",
+      "Natural language generation",
+      "Caption optimization"
     ],
-    "featured": false,
-    "technologies": ["ASP.Net Core", "MVC", "MS SQL", "Entity Framework", "Docker", "Git Flow", "CI/CD"],
+    "featured": true,
+    "technologies": ["Python", "Deep Learning", "Computer Vision"],
     "team": [
       {
-        "name": "Ismail ZAHIR",
+        "name": "Abdelmajid ZADDI",
         "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
+        "linkedin": "https://www.linkedin.com/in/abdelmajid-zaddi-694b2b290/",
+        "github": "https://www.github.com/LHW001abc"
       }
     ],
-    "tags": ["E-commerce", "Web App", "ASP.Net Core", "MVC", "MS SQL"],
-    "github": "https://github.com/ismailza/zstore.net"
+    "tags": ["AI", "Computer Vision", "Deep Learning"],
+    "github": ""
   },
   {
-    "title": "Dr Maroc",
-    "slug": "drmaroc",
-    "excerpt": "Dr Maroc offers a broad range of digital solutions to help doctors manage their clinics, services, and patients, as well as to simplify appointment booking for patients. ",
-    "overview": "Dr Maroc aims to modernize healthcare in Morocco by equipping medical professionals with digital tools and services to optimize clinic management. This web platform streamlines various healthcare operations, from appointment scheduling to patient record management, while enabling doctors to market their services. The platform ensures data security through industry-standard encryption techniques and offers a seamless user experience for both doctors and patients.",
-    "image": "/projects/drmaroc.svg",
-    "category": "Web Application",
+    "title": "Automatic Speech RecognitionL",
+    "slug": "automatic-speech-recognition",
+    "excerpt": "Speech recognition system for converting audio to text",
+    "overview": "Advanced speech recognition system that converts spoken language into written text",
+    "image": "/placeholder.svg?height=200&width=300",
+    "category": "ML",
     "timeline": {
-      "start": "Jul 2024",
+      "start": "2024",
       "end": "Present"
     },
-    "featured": true,
-    "technologies": ["Spring Boot", "React.js", "PostgreSQL", "JUnit", "JWT", "Docker", "Git Flow", "CI/CD", "VPS"],
     "features": [
-      "Appointment Management: Easily manage patient appointments with an intuitive scheduling system.",
-      "Doctor Profiles: Doctors can create and manage their profiles, list services, and availability.",
-      "Patient Records: A solution for digitizing patient medical records while ensuring data security.",
-      "Assistant Management: Doctors can add and manage assistants to help with daily tasks.",
-      "Marketing Solutions: Doctors can promote their services directly through our platform.",
-      "Clinic Digitalization: Tools to assist in the digital transformation of healthcare offices.",
-      "Medical Equipment Setup: A service for installing and managing medical equipment in clinics."
+      "Real-time speech processing",
+      "Multi-language support",
+      "Noise reduction"
     ],
+    "featured": true,
+    "technologies": ["Python", "Machine Learning", "Signal Processing"],
     "team": [
       {
-        "name": "Ismail ZAHIR",
+        "name": "Abdelmajid ZADDI",
         "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
+        "linkedin": "https://www.linkedin.com/in/abdelmajid-zaddi-694b2b290/",
+        "github": "https://www.github.com/LHW001abc"
       }
     ],
-    "tags": ["Healthcare", "Clinic Management", "Appointment Booking", "Digital Solutions"],
-    "github": "https://github.com/drmaroc"
+    "tags": ["ML", "Speech Recognition", "Audio Processing"],
+    "github": ""
   },
   {
-    "title": "ZFixBuy HUB",
-    "slug": "zfixbuy-hub",
-    "excerpt": "The ultimate online marketplace for new and used products, offering seamless buying experiences, repair services, and personalized recommendations.",
-    "overview": "ZFixBuy HUB is a feature-rich e-commerce platform designed to connect buyers, sellers, and repair service providers. This platform offers a seamless digital space where customers can buy and sell new or used products while also accessing repair services for their devices.\n\nWith a focus on security, personalization, and user experience, ZFixBuy HUB empowers businesses to manage listings and engage with customers. Additionally, customers benefit from direct communication channels, order tracking, and comprehensive service management features. The project showcases a modern web stack, ensuring scalability and security for growing business needs.",
-    "image": "/projects/zfixbuy-hub.png",
-    "category": "Web Application",
+    "title": "Stock Price Forecasting",
+    "slug": "stock-price-forecasting",
+    "excerpt": "ML-based system for predicting stock market trends",
+    "overview": "Machine learning system for analyzing and predicting stock market prices and trends",
+    "image": "/placeholder.svg?height=200&width=300",
+    "category": "ML",
     "timeline": {
-      "start": "May 2024",
+      "start": "2024",
       "end": "Present"
     },
-    "featured": true,
-    "technologies": ["Node.js", "Express.js", "React.js", "JWT", "Vitest", "MongoDB", "Docker", "Git Flow", "GitHub Actions"],
     "features": [
-      "User Registration and Authentication: Secure sign-up and login for Admins, Sellers, and Clients, with social media integration, email verification, and password reset.",
-      "Product Listings: Sellers can create, manage, and display new and used product listings, including bulk uploads.",
-      "Order Management: Clients can place orders and track their status. Sellers can manage orders, update statuses, and handle cancellations/returns.",
-      "Payment Integration: Secure payment processing through Stripe or PayPal, supporting multiple payment methods.",
-      "Repair Service Requests: Clients can request repair services, schedule appointments, and track the status of their requests.",
-      "Admin Dashboard: Admins can manage users, listings, and orders, view analytics, and handle support tickets.",
-      "Reviews and Ratings: Clients can leave reviews and ratings for products and repair services, and Sellers can respond. Admins can moderate reviews.",
-      "Messaging System: Integrated messaging for direct communication between Clients and Sellers, with real-time notifications.",
-      "Promotions and Discounts: Sellers can create and manage promotions, such as discount codes and flash sales, displayed on the homepage.",
-      "User Profiles and Personalization: Users can manage their profiles, receive personalized recommendations, and customize their experience."
+      "Price prediction",
+      "Trend analysis",
+      "Market indicators"
     ],
+    "featured": true,
+    "technologies": ["Python", "Machine Learning", "Data Analysis"],
     "team": [
       {
-        "name": "Ismail ZAHIR",
+        "name": "Abdelmajid ZADDI",
         "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
+        "linkedin": "https://www.linkedin.com/in/abdelmajid-zaddi-694b2b290/",
+        "github": "https://www.github.com/LHW001abc"
       }
     ],
-    "tags": ["E-commerce", "Services", "Web App", "Node.js", "React.js"],
-    "github": "https://github.com/ZFixBuy-HUB"
+    "tags": ["ML", "Finance", "Forecasting"],
+    "github": ""
+  },
+  {
+    "title": "Fine-tuning Stable Diffusion XL",
+    "slug": "fine-tuning-stable-diffusion",
+    "excerpt": "Optimization of Stable Diffusion XL model for specific use cases",
+    "overview": "Project focused on fine-tuning the Stable Diffusion XL model for improved performance",
+    "image": "/placeholder.svg?height=200&width=300",
+    "category": "NLP",
+    "timeline": {
+      "start": "2024",
+      "end": "Present"
+    },
+    "features": [
+      "Model optimization",
+      "Performance tuning",
+      "Custom training"
+    ],
+    "featured": true,
+    "technologies": ["Python", "PyTorch", "Deep Learning"],
+    "team": [
+      {
+        "name": "Abdelmajid ZADDI",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/abdelmajid-zaddi-694b2b290/",
+        "github": "https://www.github.com/LHW001abc"
+      }
+    ],
+    "tags": ["AI", "Deep Learning", "Image Generation"],
+    "github": ""
   },
   {
     "title": "Busway Ticket Chatbot",
@@ -170,10 +188,10 @@
     ],
     "team": [
       {
-        "name": "Ismail ZAHIR",
+        "name": "Abdelmajid ZADDI",
         "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
+        "linkedin": "https://www.linkedin.com/in/abdelmajid-zaddi-694b2b290/",
+        "github": "https://www.github.com/LHW001abc"
       },
       {
         "name": "Oumaima OUASLI",
@@ -196,7 +214,7 @@
       "start": "Feb 2024",
       "end": "Mar 2024"
     },
-    "featured": true,
+    "featured": false,
     "technologies": ["React.js", "Leaflet", "React-Leaflet", "Bootstrap", "JSON", "Python", "AGNES", "Docker"],
     "features": [
       "Interactive Map Visualization: Users can zoom and pan through traffic maps for a detailed view of NYC traffic patterns.",
@@ -207,92 +225,31 @@
     ],
     "team": [
       {
-        "name": "Ismail ZAHIR",
+        "name": "Abdelmajid ZADDI",
         "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
+        "linkedin": "https://www.linkedin.com/in/abdelmajid-zaddi-694b2b290/",
+        "github": "https://www.github.com/LHW001abc"
       },
       {
-        "name": "Khaoula ABASSI",
+        "name": "JalalEddine OUTGOUGA",
         "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/khaoula-abassi/",
-        "github": "https://www.github.com/Wahya1"
+        "linkedin": "https://www.linkedin.com/in/jeout/",
+        "github": "https://www.github.com/JeddineO"
       },
       {
-        "name": "Mohamed JEBBANEMA",
+        "name": "Loukmane ADHAIM",
         "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/mohamed-jebbanema/",
-        "github": "https://www.github.com/medjebb"
+        "linkedin": "https://www.linkedin.com/in/loukmanead404/",
+        "github": "https://www.github.com/LokmanAdh"
       },
       {
-        "name": "El Mehdi Salah BEN SOUDA",
+        "name": "Amal CHAABI",
         "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/el-mehdi-salah-ben-souda/",
-        "github": "https://www.github.com/Mehdi-Ben-Souda"
+        "github": "https://www.github.com/CHAABI-Amal"
       }
     ],
     "tags": ["React.js", "Leaflet", "AGNES"],
     "github": "https://github.com/ismailza/Traffic-Centrality"
-  },
-  {
-    "title": "ZStore.JEE",
-    "slug": "zstore-jee",
-    "excerpt": "Dynamic ecommerce web app with JEE, MVC, Hibernate, and MySQL for seamless online shopping experiences.",
-    "overview": "ZStore is a feature-rich ecommerce web application designed with JEE technologies following the MVC architecture. It offers users a smooth shopping experience with an intuitive interface and dynamic product catalog. On the backend, Hibernate ORM efficiently manages the persistence layer, while MySQL ensures secure handling of product and user data.\n\nThis project also includes a backend administration panel for managing products, orders, and user accounts. As a key developer, I led the integration of Hibernate and contributed to the frontend development using JSP to enhance site responsiveness and user interaction.",
-    "image": "/projects/zstore-jee.svg",
-    "category": "Web Application",
-    "timeline": {
-      "start": "Mar 2024",
-      "end": "Mar 2024"
-    },
-    "features": [
-      "User-Friendly Interface: Simple navigation for efficient product search.",
-      "Dynamic Product Catalog: Includes detailed descriptions and product images.",
-      "Shopping Cart Functionality: Users can add, remove, and manage products before checkout.",
-      "Admin Panel: Manage products, orders, and user accounts through a secure backend."
-    ],
-    "featured": true,
-    "technologies": ["Jakarta EE", "JSP", "MVC", "Hibernate", "MySQL"],
-    "team": [
-      {
-        "name": "Ismail ZAHIR",
-        "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
-      }
-    ],
-    "tags": ["JEE", "JSP", "MVC", "Hibernate", "MySQL"],
-    "github": "https://github.com/ismailza/ZStore"
-  },
-  {
-    "title": "Sudoku",
-    "slug": "sudoku",
-    "excerpt": "Desktop game developed using a backtracking algorithm to generate and solve Sudoku puzzles.",
-    "overview": "The game is developed using a backtracking algorithm to generate and solve the Sudoku puzzles. The algorithm works by filling in the grid with numbers from 1 to the grid size (9 for a standard 9x9 Sudoku grid) aleatorily. If the number is valid, it moves on to the next cell. If the number is not valid, it tries the next number. If no number is valid, it backtracks to the previous cell and tries a different number. This process is repeated until the grid is filled.",
-    "image": "/projects/sudoku.png",
-    "category": "Desktop Game",
-    "timeline": {
-      "start": "Jan 2024",
-      "end": "Jan 2024"
-    },
-    "featured": true,
-    "technologies": ["C++", "SFML"],
-    "features": [
-      "Classic Sudoku Gameplay: Intuitive user interface for easy navigation.",
-      "Multiple Difficulty Levels: Suitable for both casual and advanced players.",
-      "Immersive Audio Effects: Enhanced with sound for a richer experience."
-    ],
-    "team": [
-      {
-        "name": "Ismail ZAHIR",
-        "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
-      }
-    ],
-    "tags": ["cpp", "sfml", "game"],
-    "github": "https://github.com/ismailza/Sudoku",
-    "release": "https://github.com/ismailza/Sudoku/releases/latest"
   },
   {
     "title": "JI2A . Payroll Management Platform",
@@ -305,7 +262,7 @@
       "start": "May 2023",
       "end": "Jun 2023"
     },
-    "featured": true,
+    "featured": false,
     "features": [
       "User authentication and authorization for secure access.",
       "Employee management with detailed profiles and salary information.",
@@ -361,152 +318,25 @@
     ],
     "team": [
       {
-        "name": "Ismail ZAHIR",
+        "name": "Abdelmajid ZADDI",
         "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
+        "linkedin": "https://www.linkedin.com/in/abdelmajid-zaddi-694b2b290/",
+        "github": "https://www.github.com/LHW001abc"
       },
       {
-        "name": "Yasser TRIDOU",
+        "name": "JalalEddine OUTGOUGA",
         "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/tridou-yasser/",
-        "github": "https://www.github.com/yasser-TRIDOU"
+        "linkedin": "https://www.linkedin.com/in/jeout/",
+        "github": "https://www.github.com/JeddineO"
+      },
+      {
+        "name": "Loukmane ADHAIM",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/loukmanead404/",
+        "github": "https://www.github.com/LokmanAdh"
       }
     ],
     "technologies": ["C Programming", "GTK+"],
     "tags": ["C", "GTK+", "Algorithms", "Data Structures"]
-  },
-  {
-    "title": "Tic-Tac-Toe Game",
-    "slug": "tic-tac-toe-game",
-    "excerpt": "Tic-Tac-Toe game developed with HTML, CSS, and JavaScript for two-player fun and vs. AI.",
-    "overview": "Developed a web-based Tic-Tac-Toe game using HTML, CSS, and JavaScript for two-player fun and vs. AI.",
-    "image": "/projects/tic-tac-toe.png",
-    "category": "Web Game",
-    "timeline": {
-      "start": "Sep 2023",
-      "end": "Sep 2023"
-    },
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "features": [
-      "Classic Tic-Tac-Toe gameplay with a clean, intuitive interface.",
-      "Single-player mode against AI for challenging gameplay.",
-      "Two-player mode for competitive fun.",
-      "AI with varying difficulty levels to suit all players.",
-      "Save and load game functionality for resuming play at any time."
-    ],
-    "team": [
-      {
-        "name": "Ismail ZAHIR",
-        "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
-      }
-    ],
-    "tags": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/ismailza/Tic-Tac-Toe",
-    "demo": "https://ismailza.github.io/Tic-Tac-Toe/"
-  },
-  {
-    "title": "Js To-Do List",
-    "slug": "js-to-do-list",
-    "excerpt": "Simple to-do list web app developed with HTML, CSS, and JavaScript for managing tasks.",
-    "overview": "Developed a simple to-do list web application using HTML, CSS, and JavaScript to manage tasks.",
-    "image": "/projects/js-todo-list.png",
-    "category": "Web Application",
-    "timeline": {
-      "start": "Jul 2023",
-      "end": "Jul 2023"
-    },
-    "features": [
-      "Add, edit, and delete tasks for efficient task management.",
-      "Mark tasks as complete to track progress.",
-      "Responsive design for optimal viewing on desktop and mobile devices.",
-      "Dark mode for reduced eye strain during night-time use."
-    ],
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "team": [
-      {
-        "name": "Ismail ZAHIR",
-        "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
-      }
-    ],
-    "tags": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/ismailza/Js-ToDo-List",
-    "demo": "https://ismailza.github.io/Js-ToDo-List/"
-  },
-  {
-    "title": "Js Simple Calculator",
-    "slug": "js-simple-calculator",
-    "excerpt": "Simple calculator web app developed with HTML, CSS, and JavaScript for basic arithmetic operations.",
-    "overview": "Developed a simple calculator web application using HTML, CSS, and JavaScript to perform basic arithmetic operations.",
-    "image": "/projects/js-calculator.png",
-    "category": "Web Application",
-    "timeline": {
-      "start": "Jul 2023",
-      "end": "Jul 2023"
-    },
-    "features": [
-      "Basic arithmetic operations: addition, subtraction, multiplication, and division.",
-      "Clear and delete functionality for correcting input errors.",
-      "Responsive design for optimal viewing on desktop and mobile devices.",
-      "Dark mode for reduced eye strain during night-time use."
-    ],
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "tags": ["HTML", "CSS", "JavaScript"],
-    "team": [
-      {
-        "name": "Ismail ZAHIR",
-        "role": "Software Engineering Student at FST Mohammedia - UH2C",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
-      }
-    ],
-    "github": "https://github.com/ismailza/Simple-Js-Calculator",
-    "demo": "https://ismailza.github.io/Simple-Js-Calculator/"
-  },
-  {
-    "title": "Drâa Tafilalet Travel",
-    "slug": "draa-tafilalet-travel",
-    "excerpt": "Travel agency website developed with HTML, CSS, and JavaScript for showcasing tours and services.",
-    "overview": "Developed a travel agency website using HTML, CSS, and JavaScript to showcase tours and services offered by the agency.",
-    "image": "/projects/draa-tafilalet-travel.png",
-    "category": "Web Application",
-    "timeline": {
-      "start": "May 2022",
-      "end": "Jun 2022"
-    },
-    "features": [
-      "Interactive map with tour locations and details.",
-      "Hotel and tour packages with pricing and booking options.",
-      "Restaurant and activity recommendations for travelers.",
-      "Transportation services for easy travel arrangements.",
-      "Contact form for inquiries and bookings.",
-      "Responsive design for optimal viewing on desktop and mobile devices."
-    ],
-    "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap", "JQuery", "Google Maps API", "AJAX"],
-    "team": [
-      {
-        "name": "Ismail ZAHIR",
-        "role": "Software Engineering Student at FST Errachidia - UMI",
-        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
-        "github": "https://www.github.com/ismailza"
-      },
-      {
-        "name": "Ayoub ZITANE",
-        "role": "Software Engineering Student at FST Errachidia - UMI",
-        "linkedin": "https://www.linkedin.com/in/ayoub-zitane-a86a9429b"
-      },
-      {
-        "name": "Zakia RHIOUI",
-        "role": "Software Engineering Student at FST Errachidia - UMI",
-        "linkedin": "https://www.linkedin.com/in/zakia-rhioui-8b9280246"
-      }
-    ],
-    "featured": true,
-    "tags": ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    "github": "https://github.com/ismailza/Draa-Tafilalet-Travel"
   }
 ]
