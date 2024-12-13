@@ -83,8 +83,8 @@ export default function Home() {
 
   return (
     <div className="lg:px-12 bg-white dark:bg-gray-900">
-      <header className="container px-6 py-16 mx-auto">
-        <div className="items-center lg:flex lg:flex-row-reverse">
+    <header className="container px-6 py-16 mx-auto">
+    <div className="items-center lg:flex lg:flex-row-reverse hover:bg-blue-50 duration-300 transition-colors">
           <div className="relative mx-auto mt-4 md:mt-16 lg:mt-0">
             <div className="flex items-center justify-center">
             <Image alt='avatar' width={300} height={300}

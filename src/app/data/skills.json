@@ -98,5 +98,265 @@
     "name": "C",
     "icon": "/icons/c.png",
     "featured": false
+  },
+  {
+    "name": "Python",
+    "icon": "/icons/python.png",
+    "featured": true
+  },
+  {
+    "name": "SQL",
+    "icon": "/icons/sql.png",
+    "featured": true
+  },
+  {
+    "name": "Java",
+    "icon": "/icons/java.png",
+    "featured": false
+  },
+  {
+    "name": "Scala",
+    "icon": "/icons/scala.png",
+    "featured": false
+  },
+  {
+    "name": "R",
+    "icon": "/icons/r.png",
+    "featured": false
+  },
+  {
+    "name": "Apache Spark",
+    "icon": "/icons/spark.png",
+    "featured": true
+  },
+  {
+    "name": "Hadoop",
+    "icon": "/icons/hadoop.png",
+    "featured": false
+  },
+  {
+    "name": "Kafka",
+    "icon": "/icons/kafka.png",
+    "featured": false
+  },
+  {
+    "name": "AWS",
+    "icon": "/icons/aws.png",
+    "featured": true
+  },
+  {
+    "name": "Google Cloud",
+    "icon": "/icons/google-cloud.png",
+    "featured": false
+  },
+  {
+    "name": "Azure",
+    "icon": "/icons/azure.png",
+    "featured": false
+  },
+  {
+    "name": "PostgreSQL",
+    "icon": "/icons/postgresql.png",
+    "featured": true
+  },
+  {
+    "name": "MySQL",
+    "icon": "/icons/mysql.png",
+    "featured": true
+  },
+  {
+    "name": "MongoDB",
+    "icon": "/icons/mongodb.png",
+    "featured": false
+  },
+  {
+    "name": "Cassandra",
+    "icon": "/icons/cassandra.png",
+    "featured": false
+  },
+  {
+    "name": "Snowflake",
+    "icon": "/icons/snowflake.png",
+    "featured": true
+  },
+  {
+    "name": "Redis",
+    "icon": "/icons/redis.png",
+    "featured": false
+  },
+  {
+    "name": "Apache Airflow",
+    "icon": "/icons/airflow.png",
+    "featured": true
+  },
+  {
+    "name": "Talend",
+    "icon": "/icons/talend.png",
+    "featured": false
+  },
+  {
+    "name": "DBT",
+    "icon": "/icons/dbt.png",
+    "featured": false
+  },
+  {
+    "name": "Informatica",
+    "icon": "/icons/informatica.png",
+    "featured": false
+  },
+  {
+    "name": "Scikit-learn",
+    "icon": "/icons/scikit-learn.png",
+    "featured": true
+  },
+  {
+    "name": "TensorFlow",
+    "icon": "/icons/tensorflow.png",
+    "featured": true
+  },
+  {
+    "name": "PyTorch",
+    "icon": "/icons/pytorch.png",
+    "featured": true
+  },
+  {
+    "name": "XGBoost",
+    "icon": "/icons/xgboost.png",
+    "featured": false
+  },
+  {
+    "name": "LightGBM",
+    "icon": "/icons/lightgbm.png",
+    "featured": false
+  },
+  {
+    "name": "Keras",
+    "icon": "/icons/keras.png",
+    "featured": false
+  },
+  {
+    "name": "Hugging Face",
+    "icon": "/icons/hugging-face.png",
+    "featured": true
+  },
+  {
+    "name": "OpenAI APIs",
+    "icon": "/icons/openai.png",
+    "featured": true
+  },
+  {
+    "name": "Tableau",
+    "icon": "/icons/tableau.png",
+    "featured": true
+  },
+  {
+    "name": "Power BI",
+    "icon": "/icons/powerbi.png",
+    "featured": false
+  },
+  {
+    "name": "Matplotlib",
+    "icon": "/icons/matplotlib.png",
+    "featured": false
+  },
+  {
+    "name": "Seaborn",
+    "icon": "/icons/seaborn.png",
+    "featured": false
+  },
+  {
+    "name": "Plotly",
+    "icon": "/icons/plotly.png",
+    "featured": false
+  },
+  {
+    "name": "Docker",
+    "icon": "/icons/docker.png",
+    "featured": true
+  },
+  {
+    "name": "Kubernetes",
+    "icon": "/icons/kubernetes.png",
+    "featured": true
+  },
+  {
+    "name": "Jenkins",
+    "icon": "/icons/jenkins.png",
+    "featured": false
+  },
+  {
+    "name": "GitHub Actions",
+    "icon": "/icons/github-actions.png",
+    "featured": false
+  },
+  {
+    "name": "Git",
+    "icon": "/icons/git.png",
+    "featured": true
+  },
+  {
+    "name": "GitHub",
+    "icon": "/icons/github.png",
+    "featured": false
+  },
+  {
+    "name": "GitLab",
+    "icon": "/icons/gitlab.png",
+    "featured": false
+  },
+  {
+    "name": "REST",
+    "icon": "/icons/rest.png",
+    "featured": true
+  },
+  {
+    "name": "GraphQL",
+    "icon": "/icons/graphql.png",
+    "featured": false
+  },
+  {
+    "name": "FastAPI",
+    "icon": "/icons/fastapi.png",
+    "featured": false
+  },
+  {
+    "name": "Flask",
+    "icon": "/icons/flask.png",
+    "featured": false
+  },
+  {
+    "name": "Django",
+    "icon": "/icons/django.png",
+    "featured": false
+  },
+  {
+    "name": "Apache Beam",
+    "icon": "/icons/beam.png",
+    "featured": false
+  },
+  {
+    "name": "Luigi",
+    "icon": "/icons/luigi.png",
+    "featured": false
+  },
+  {
+    "name": "Prefect",
+    "icon": "/icons/prefect.png",
+    "featured": false
+  },
+  {
+    "name": "MLflow",
+    "icon": "/icons/mlflow.png",
+    "featured": true
+  },
+  {
+    "name": "DVC",
+    "icon": "/icons/dvc.png",
+    "featured": false
+  },
+  {
+    "name": "Weights & Biases",
+    "icon": "/icons/wandb.png",
+    "featured": true
   }
 ]

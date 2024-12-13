@@ -15,6 +15,11 @@
   },
   {
     "title": "AI Developer",
+    "company": {
+      "name": "UPWORK",
+      "logo":"/logo/up.png",
+      "location": "Rabat, Morocco"
+    },
     "type": "Hybrid",
     "startedAt": "Avr 2024",
     "endedAt": "Present",

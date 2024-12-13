@@ -55,7 +55,7 @@
     "slug": "automatic-image-captioning",
     "excerpt": "An AI-powered system for generating descriptive captions for images",
     "overview": "A system designed to automatically generate descriptive captions for images using advanced AI techniques",
-    "image": "/placeholder.svg?height=200&width=300",
+    "image": "/projects/P1.png",
     "category": "Data Scientist",
     "timeline": {
       "start": "2024",
@@ -84,7 +84,7 @@
     "slug": "automatic-speech-recognition",
     "excerpt": "Speech recognition system for converting audio to text",
     "overview": "Advanced speech recognition system that converts spoken language into written text",
-    "image": "/placeholder.svg?height=200&width=300",
+    "image": "/projects/P2.png",
     "category": "ML",
     "timeline": {
       "start": "2024",
@@ -113,7 +113,7 @@
     "slug": "stock-price-forecasting",
     "excerpt": "ML-based system for predicting stock market trends",
     "overview": "Machine learning system for analyzing and predicting stock market prices and trends",
-    "image": "/placeholder.svg?height=200&width=300",
+    "image": "/projects/P3.png",
     "category": "ML",
     "timeline": {
       "start": "2024",
@@ -142,7 +142,7 @@
     "slug": "fine-tuning-stable-diffusion",
     "excerpt": "Optimization of Stable Diffusion XL model for specific use cases",
     "overview": "Project focused on fine-tuning the Stable Diffusion XL model for improved performance",
-    "image": "/placeholder.svg?height=200&width=300",
+    "image": "/projects/P4.png",
     "category": "NLP",
     "timeline": {
       "start": "2024",
