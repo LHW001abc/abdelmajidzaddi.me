@@ -36,12 +36,12 @@ Ensure you have the following installed on your machine:
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ismailza/ismailzahir.com.git
+   git clone https://github.com/ismailza/abdelmajidzaddi.me.git
     ```
    
 2. Navigate into the project directory:
     ```bash
-    cd ismailzahir.com
+    cd abdelmajidzaddi.me
     ```
    
 3. Install the dependencies:
@@ -89,12 +89,10 @@ To run the production build locally:
 ```
 
 ## 🌐 Live Demo
-The portfolio is live at [ismailzahir.com](https://ismailzahir.com).
+The portfolio is live at [abdelmajidzaddi.me](https://abdelmajidzaddi.me).
 
 ## 📧 Contact
 Feel free to reach out if you'd like to collaborate or have any inquiries:
-
-
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
