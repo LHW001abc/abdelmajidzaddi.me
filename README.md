@@ -94,8 +94,7 @@ The portfolio is live at [ismailzahir.com](https://ismailzahir.com).
 ## 📧 Contact
 Feel free to reach out if you'd like to collaborate or have any inquiries:
 
-- **Email**: [ismailza407@gmail.com](mailto:ismailza407@gmail.com)
-- **LinkedIn**: [Ismail ZAHIR](https://www.linkedin.com/in/ismailzahir01/)
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
