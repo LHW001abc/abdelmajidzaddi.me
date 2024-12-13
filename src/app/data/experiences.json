@@ -3,6 +3,7 @@
     "title": "NLP Engineering Intern",
     "company": {
       "name": "3D SMART FACTORY",
+      "logo":"/logo/3D.png",
       "location": "Rabat, Morocco"
     },
     "type": "Hybrid",
@@ -24,6 +25,7 @@
     "company": {
       "name": "Cash PLus",
       "url": "https://www.cashplus.ma/",
+      "logo":"/logo/CASHPLUS.jpg",
       "location": "Boulevard Emile Zola, Casablanca, Morocco"
     },
     "type": "Hybrid",
