@@ -1,5 +1,19 @@
 [
   {
+    "title": "AI Engineering ",
+    "company": {
+      "name": "Futurate By Infosysta",
+      "logo":"/logo/ft.png",
+      "location": "Casablanca, Morocco"
+    },
+    "type": "Hybrid",
+    "startedAt": "Fev 2025 ",
+    "endedAt": "Present",
+    "employment_type": "Full-time",
+    "skills": ["Streamlit", "Pandas", "Numpy", "Sk-learn", "React Js", "Python", "PyTorch", "Docker","Huggingface","Flask","FastAPI","Django","LLM", "NLP"]
+
+  },
+  {
     "title": "NLP Engineering Intern",
     "company": {
       "name": "3D SMART FACTORY",
