@@ -2,7 +2,7 @@
   {
     "title": "Big Data Fundamentals with PySpark",
     "credential_id": "CC-0BULPLVU",
-    "image": "/certificates/Big Data Fundamentals with PySpark-1.png",
+    "image": "/certificates/BigDataFundamentalswithPySpark-1.png",
     "issuedAt": "Sep 2024",
     "issuedBy": "DataCamp",
     "featured": false
@@ -24,7 +24,7 @@
     "featured": false
   },
   {
-    "title": "DevOps Concepts-1",
+    "title": "DevOps Concepts",
     "credential_id": "CC-A6QPY5KH",
     "image": "/certificates/DevOps Concepts-1.png",
     "issuedAt": "Aug 2024",
@@ -32,14 +32,14 @@
     "featured": true
   },
   {
-    "title": "Intermediate Git-1",
+    "title": "Intermediate Git",
     "image": "/certificates/Intermediate Git-1.png",
     "issuedAt": "Feb 2024",
     "issuedBy": "DataCamp",
     "featured": true
   },
   {
-    "title": "Introduction to Apache Kafka-1",
+    "title": "Introduction to Apache Kafka",
     "credential_id": "CT-MJA9WCC9",
     "image": "/certificates/Introduction to Apache Kafka-1.png",
     "issuedAt": "Sep 2022",
@@ -47,7 +47,7 @@
     "featured": false
   },
   {
-    "title": "Introduction to dbt-1",
+    "title": "Introduction to dbt",
     "credential_id": "CT-3HTEJVD7",
     "image": "/certificates/Introduction to dbt-1.png",
     "issuedAt": "Jul 2022",
@@ -55,7 +55,7 @@
     "featured": false
   },
   {
-    "title": "Introduction to Docker-1",
+    "title": "Introduction to Docker",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/Introduction to Docker-1.png",
     "issuedAt": "Oct 2021",
@@ -63,7 +63,7 @@
     "featured": true
   },
   {
-    "title": "Introduction to Git-1",
+    "title": "Introduction to Git",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/Introduction to Git-1.png",
     "issuedAt": "Oct 2021",
@@ -71,7 +71,7 @@
     "featured": true
   },
   {
-    "title": "Introduction to Kubernetes-1",
+    "title": "Introduction to Kubernetes",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/Introduction to Kubernetes-1.png",
     "issuedAt": "Oct 2021",
@@ -79,7 +79,7 @@
     "featured": true
   },
   {
-    "title": "Introduction to NoSQL-1",
+    "title": "Introduction to NoSQL",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/Introduction to NoSQL-1.png",
     "issuedAt": "Oct 2021",
@@ -87,7 +87,7 @@
     "featured": true
   },
   {
-    "title": "Introduction to Object-Oriented-1",
+    "title": "Introduction to Object-Oriented",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/Introduction to Object-Oriented-1.png",
     "issuedAt": "Oct 2021",
@@ -95,7 +95,7 @@
     "featured": true
   },
   {
-    "title": "MLOps Concepts-1",
+    "title": "MLOps Concepts",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/MLOps Concepts-1.png",
     "issuedAt": "Oct 2021",
@@ -103,7 +103,7 @@
     "featured": true
   },
   {
-    "title": "MLOps Deployment and Life Cycling-1",
+    "title": "MLOps Deployment and Life Cycling",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/MLOps Deployment and Life Cycling-1.png",
     "issuedAt": "Oct 2021",
@@ -111,7 +111,7 @@
     "featured": true
   },
   {
-    "title": "Streaming Concepts-1",
+    "title": "Streaming Concepts",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/Streaming Concepts-1.png",
     "issuedAt": "Oct 2021",
@@ -119,7 +119,7 @@
     "featured": true
   },
   {
-    "title": "Supervised Learning with scikit-learn-1",
+    "title": "Supervised Learning with scikit-learn",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/Supervised Learning with scikit-learn-1.png",
     "issuedAt": "Oct 2021",
@@ -127,7 +127,7 @@
     "featured": true
   },
   {
-    "title": "Understanding Modern Data Architecture-1",
+    "title": "Understanding Modern Data Architecture",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/Understanding Modern Data Architecture-1.png",
     "issuedAt": "Oct 2021",
@@ -135,7 +135,7 @@
     "featured": true
   },
   {
-    "title": "Writing Efficient Python Code-1",
+    "title": "Writing Efficient Python Code",
     "credential_id": "CT-LZIWDBCP",
     "image": "/certificates/Writing Efficient Python Code-1.png",
     "issuedAt": "Oct 2021",
