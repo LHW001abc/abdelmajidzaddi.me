@@ -47,7 +47,7 @@ const ContactForm = () => {
         // Handle error
         toast.error('Failed to send message. Please try again later.');
       }
-    } catch (error) {
+    } catch (_) { // Changed from 'error' to '_' to indicate intentionally unused parameter
       toast.error('Network error. Please check your connection and try again.');
     } finally {
       setSubmitting(false);
