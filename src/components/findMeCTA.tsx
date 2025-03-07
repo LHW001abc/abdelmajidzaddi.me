@@ -87,7 +87,7 @@ const FindMeCTA = () => {
         
         {/* Connect with me text */}
         <p className="mt-8 text-sm text-gray-600 dark:text-gray-400 max-w-md animate-pulse">
-          Let's connect and discuss how we can work together on your next project!
+          Let&apos;s connect and discuss how we can work together on your next project!
         </p>
       </div>
     </div>

@@ -6,9 +6,7 @@ const Title = ({
   className = "", 
   textClass = "", 
   children,
-  accentColor = "blue-500",
-  shadowColor = "blue-300"
-}: { 
+  accentColor = "blue-500"}: { 
   className?: string, 
   textClass?: string, 
   children: React.ReactNode,

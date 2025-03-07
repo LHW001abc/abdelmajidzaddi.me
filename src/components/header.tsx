@@ -66,7 +66,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [navItems]);
 
   return (
     <section 
