@@ -64,6 +64,7 @@ export interface SkillProps {
   name: string;
   icon: string;
   featured: boolean;
+  level?: number;
 }
 
 /**
@@ -97,8 +98,10 @@ export interface ServiceProps {
  */
 export interface HonorProps {
   title: string;
-  issuedAt: string,
-  issuedBy: string,
   description: string;
-  is_award: boolean;
+  issuedAt: string;
+  issuedBy: string;
+  is_award?: boolean;
+  badge?: string; // Add the badge property as optional
+  // Add any other properties used in your component
 }

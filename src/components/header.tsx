@@ -14,11 +14,11 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState("");
 
   const navItems = useMemo(() => [
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Resume', href: '#resume' },
-    { name: 'Work', href: '#work' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'About', href: '#about', link: 'about' },
+    { name: 'Services', href: '#services', link: 'services' },
+    { name: 'Resume', href: '#resume', link: 'resume' },
+    { name: 'Work', href: '#work', link: 'work' },
+    { name: 'Contact', href: '#contact', link: 'contact' }
   ], []);
 
   const toggleMenu = () => {
@@ -36,7 +36,9 @@ const Header = () => {
 
       // Active section detection
       const sections = navItems.map(item => item.link);
-      sections.push("contact");
+      
+      // No need to push "contact" as it's already included in navItems
+      // sections.push("contact");
 
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -133,6 +135,7 @@ const Header = () => {
                     scrollToSection(item.href);
                     setOpen(false);
                   }}
+     
                   className={`
                     inline-block text-gray-700 dark:text-gray-200 
                     transition-colors duration-300 cursor-pointer
@@ -140,7 +143,7 @@ const Header = () => {
                     ${activeSection === item.link ? 'text-blue-600 dark:text-blue-400 font-medium' : ''}
                   `}
                 >
-                  {item.label}
+                  {item.name}
                 </span>
                 {/* Animated underline */}
                 <span className={`
