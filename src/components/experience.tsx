@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ExperienceProps } from "@/lib/types";
+import Image from 'next/image';
 
 const Experience = ({ data: experience }: { data: ExperienceProps }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -44,7 +45,7 @@ const Experience = ({ data: experience }: { data: ExperienceProps }) => {
             `}
           >
             <div className="bg-white dark:bg-gray-800 rounded-full">
-              <img 
+              <Image
                 className={`
                   object-cover w-12 h-12 rounded-full
                   transition-all duration-300
@@ -52,6 +53,8 @@ const Experience = ({ data: experience }: { data: ExperienceProps }) => {
                 `}
                 src={experience.company?.logo ?? '/logo/company-default.png'}
                 alt={experience.company?.name || "Company logo"}
+                width={40}
+                height={40}
                 loading="lazy"
               />
             </div>

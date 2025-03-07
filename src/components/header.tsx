@@ -1,10 +1,11 @@
 'use client';
-import {useEffect, useState} from "react";
+import {useEffect, useState, useMemo} from "react";
 import Link from "next/link";
 import {scrollToSection} from "@/lib/helper";
 import ThemeSwitcher from "@/components/themeSwitcher";
 import {useTheme} from "@/context/ThemeContext";
 import {logo} from "@/config/app";
+import Image from 'next/image';
 
 const Header = () => {
   const { theme } = useTheme();
@@ -12,24 +13,13 @@ const Header = () => {
   const [isFixed, setFixed] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  const navItems = [
-    {
-      label: "About Me",
-      link: "about",
-    },
-    {
-      label: "Services",
-      link: "services",
-    },
-    {
-      label: "Resume",
-      link: "resume",
-    },
-    {
-      label: "Work",
-      link: "work",
-    },
-  ];
+  const navItems = useMemo(() => [
+    { name: 'About', href: '#about' },
+    { name: 'Services', href: '#services' },
+    { name: 'Resume', href: '#resume' },
+    { name: 'Work', href: '#work' },
+    { name: 'Contact', href: '#contact' }
+  ], []);
 
   const toggleMenu = () => {
     setOpen(!isOpen);
@@ -81,10 +71,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <Link href="/" className="group">
             <div className="relative overflow-hidden">
-              <img
+              <Image
                 className="w-auto h-14 transition-transform duration-500 group-hover:scale-105"
                 src={theme === 'dark' ? logo.dark : logo.light}
                 alt="Ismail ZAHIR"
+                width={160}
+                height={32}
                 loading="lazy"
               />
               {/* Logo hover effect */}
@@ -138,7 +130,7 @@ const Header = () => {
               <div key={index} className="relative group lg:mx-3">
                 <span 
                   onClick={() => {
-                    scrollToSection(item.link);
+                    scrollToSection(item.href);
                     setOpen(false);
                   }}
                   className={`

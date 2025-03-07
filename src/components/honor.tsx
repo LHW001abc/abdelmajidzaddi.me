@@ -1,5 +1,6 @@
 import { HonorProps } from "@/lib/types";
 import React, { useState } from "react";
+import Image from 'next/image';
 
 const Honor = ({ data: honor }: { data: HonorProps }) => {
   const [showFullDescription, setShowFullDescription] = useState(false);
@@ -34,15 +35,16 @@ const Honor = ({ data: honor }: { data: HonorProps }) => {
             ${isHovered ? 'bg-gradient-to-r from-blue-500 to-indigo-600' : 'bg-transparent'}
           `}>
             <div className="bg-white dark:bg-gray-800 rounded-full">
-              <img
+              <Image
                 className={`
                   h-12 w-12 p-1 rounded-full
                   transition-all duration-300
                   ${isHovered ? 'scale-110' : 'scale-100'}
                 `}
-                src="/icons/award.webp"
-                loading="lazy"
-                alt="Award icon"
+                src={honor.badge || '/icons/award.svg'}
+                alt={honor.title}
+                width={64}
+                height={64}
               />
             </div>
           </div>

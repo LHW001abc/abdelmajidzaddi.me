@@ -8,6 +8,7 @@ import NotFound from "next/dist/client/components/not-found-error";
 import Link from "next/link";
 import Title from "@/components/Title";
 import {ProjectProps} from "@/lib/types";
+import Image from 'next/image';
 
 export default function Project({ params }: { params: { slug: string } }) {
 
@@ -63,10 +64,12 @@ export default function Project({ params }: { params: { slug: string } }) {
             </div>
           </div>
           <div className="flex flex-col items-center justify-center w-full p-2 mt-6 lg:mt-0 lg:w-1/2">
-            <img
-              className="w-full h-full lg:max-w-3xl rounded-xl responsive"
+            <Image
               src={project.image}
               alt={project.title}
+              width={1200}
+              height={630}
+              className="w-full h-auto rounded-lg shadow-lg"
             />
             <div className="flex w-full gap-x-2 mt-4">
               {project.demo &&

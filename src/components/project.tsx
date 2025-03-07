@@ -1,6 +1,7 @@
 import { ProjectProps } from "@/lib/types";
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from 'next/image';
 
 const Project = ({ data: project }: { data: ProjectProps }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -17,11 +18,13 @@ const Project = ({ data: project }: { data: ProjectProps }) => {
       <div className="relative overflow-hidden">
         <Link href={`/projects/${project.slug}`}>
           <div className="relative">
-            <img
+            <Image
               className={`object-cover object-center w-full h-56 rounded-t-lg transition-transform duration-700 ease-in-out ${isHovered ? 'scale-110' : 'scale-100'}`}
               src={project.image}
               alt={project.title}
               loading="lazy"
+              width={400}
+              height={256}
             />
             <div className={`absolute inset-0 bg-gradient-to-t from-blue-500/50 to-transparent opacity-0 transition-opacity duration-500 ${isHovered ? 'opacity-70' : ''}`}></div>
             

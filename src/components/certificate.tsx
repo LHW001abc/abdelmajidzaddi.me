@@ -49,9 +49,9 @@ const Certificate = ({ data: certificate }: { data: CertificateProps }) => {
           </p>
         </div>
         
-        {certificate.url && (
+        {'url' in certificate && certificate.url ? (
           <motion.a 
-            href={certificate.url}
+            href={certificate.url as string}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-10 h-10 rounded-full bg-white/20 dark:bg-gray-800/40 absolute top-4 right-4 z-20 opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white/40 dark:hover:bg-gray-700/60"
@@ -61,7 +61,7 @@ const Certificate = ({ data: certificate }: { data: CertificateProps }) => {
           >
             <FiExternalLink className="text-white" />
           </motion.a>
-        )}
+        ) : null}
       </motion.div>
     </motion.div>
   );

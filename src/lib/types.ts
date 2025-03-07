@@ -53,6 +53,8 @@ export interface EducationProps {
   };
   startedAt: string;
   endedAt?: string | 'Present';
+  description?: string;
+
 }
 
 /**

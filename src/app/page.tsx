@@ -149,11 +149,13 @@ export default function Home() {
           <div className="absolute w-full bg-blue-100 dark:bg-gray-700 -z-10 md:h-96 rounded-2xl"></div>
           <div
             className="w-full p-6 bg-blue-100 dark:bg-gray-700 md:flex md:items-center rounded-2xl md:bg-transparent dark:md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
-            <img
+            <Image
               className="h-24 w-24 md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl"
               src="/abdelmajidzaddi.jpg"
               alt="photo"
-              loading="lazy"
+              width={416}
+              height={576}
+              priority
             />
             <div className="mt-2 md:mx-6">
               <div>

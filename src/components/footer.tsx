@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import {logo, socials} from "@/config/app";
 import {useTheme} from "@/context/ThemeContext";
+import Image from 'next/image';
 
 const Footer = () => {
   const { theme } = useTheme();
@@ -20,11 +21,13 @@ const Footer = () => {
         {/* Logo with hover effect */}
         <Link href="/" className="group relative transition-transform duration-300 hover:scale-105">
           <div className="relative overflow-hidden">
-            <img
+            <Image
               className="w-auto h-14 transition-all duration-500"
               src={theme === 'dark' ? logo.dark : logo.light}
               alt="Abdelmajid ZADDI"
               loading="lazy"
+              width={120}
+              height={24}
             />
             {/* Logo hover effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-indigo-500/10 dark:from-blue-500/10 dark:to-indigo-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

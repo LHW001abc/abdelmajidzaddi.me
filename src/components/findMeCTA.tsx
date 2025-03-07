@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { socials } from "@/config/app";
 import { useState } from "react";
+import Image from 'next/image';
 
 const FindMeCTA = () => {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
@@ -43,11 +44,11 @@ const FindMeCTA = () => {
               relative transition-all duration-500 transform
               ${hoveredIcon === 'github' ? 'scale-125 rotate-[360deg]' : 'scale-100 rotate-0'}
             `}>
-              <img 
+              <Image 
                 src="/logo/github.gif" 
                 alt="GitHub" 
-                width="48px" 
-                height="48px"
+                width={48}
+                height={48}
                 className="rounded-full shadow-lg hover:shadow-blue-400/20 dark:hover:shadow-blue-500/30 
                          transition-shadow duration-300"
               />
@@ -73,11 +74,11 @@ const FindMeCTA = () => {
               relative transition-all duration-500 transform
               ${hoveredIcon === 'linkedin' ? 'scale-125 rotate-[360deg]' : 'scale-100 rotate-0'}
             `}>
-              <img 
+              <Image 
                 src="/logo/linkedin.gif" 
                 alt="LinkedIn" 
-                width="48px" 
-                height="48px"
+                width={48}
+                height={48}
                 className="rounded-full shadow-lg hover:shadow-blue-400/20 dark:hover:shadow-blue-500/30 
                          transition-shadow duration-300"
               />
