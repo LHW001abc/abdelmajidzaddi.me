@@ -1,5 +1,6 @@
 import {EducationProps} from "@/lib/types";
 import React, { useState } from "react";
+import Image from 'next/image';
 
 const Education = ({ data: education }: { data: EducationProps }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -57,7 +58,7 @@ const Education = ({ data: education }: { data: EducationProps }) => {
           ${isHovered ? 'bg-gradient-to-r from-blue-500 to-indigo-600' : 'bg-transparent'}
         `}>
           <div className="bg-white dark:bg-gray-800 rounded-full">
-            <img 
+            <Image 
               className={`
                 object-cover w-12 h-12 rounded-full
                 transition-all duration-300
@@ -65,7 +66,8 @@ const Education = ({ data: education }: { data: EducationProps }) => {
               `}
               src={education.school?.logo || '/logo/company-default.png'}
               alt={education.school?.name || "School logo"}
-              loading="lazy"
+              width={48}
+              height={48}
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { SkillProps } from "@/lib/types";
+import Image from 'next/image';
 
 const Skill = ({ data: skill }: { data: SkillProps }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -26,9 +27,11 @@ const Skill = ({ data: skill }: { data: SkillProps }) => {
           ${isHovered ? 'bg-gradient-to-r from-blue-500 to-indigo-600' : 'bg-transparent'}
         `}>
           <div className="bg-white dark:bg-gray-800 rounded-lg p-4 flex items-center justify-center w-20 h-20 transition-all duration-300">
-            <img
-              src={skill.icon}
+            <Image
+              src={skill.icon || "/icons/default-skill.svg"}
               alt={skill.name}
+              width={64}
+              height={64}
               className={`
                 max-w-full max-h-full filter 
                 ${isHovered ? 'scale-110' : 'scale-100'}
