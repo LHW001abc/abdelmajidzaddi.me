@@ -6,7 +6,8 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import React from "react";
 import { metadata as metadata1 } from "@/config/app";
-import {ThemeProvider} from "@/context/ThemeContext";
+import { ThemeProvider } from "@/context/ThemeContext";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,16 +29,17 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider>
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Header />
-        {children}
-        <Footer />
-        <Analytics />
-      </body>
-    </html>
+      <html lang="en" className="scroll-smooth">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-black transition-colors duration-300`}
+        >
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+          <Analytics mode="production" />
+          <SpeedInsights />
+        </body>
+      </html>
     </ThemeProvider>
   );
 }

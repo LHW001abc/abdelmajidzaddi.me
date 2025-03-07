@@ -26,6 +26,8 @@ import Honor from "@/components/honor";
 import Link from "next/link";
 import Image from "next/image";
 import DownloadResumeModal from "@/components/DownloadResumeModal";
+import { motion } from 'framer-motion';
+import { fadeIn, staggerContainer } from "@/lib/animations"; // Create this file for reusable animations
 
 export default function Home() {
 
@@ -262,24 +264,43 @@ export default function Home() {
                 </div>
               )}
               {resumeTab === 'skills' && (
-                <div className="mb-12">
-                  <h2 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">
+                <motion.div 
+                  initial="hidden"
+                  whileInView="show"
+                  variants={staggerContainer}
+                  viewport={{ once: true, amount: 0.25 }}
+                  className="mb-12"
+                >
+                  <motion.h2 
+                    variants={fadeIn('up', 'tween', 0.1, 0.8)}
+                    className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white"
+                  >
                     Skills
-                  </h2>
-                  <p className="my-2 text-gray-600 dark:text-gray-300">
+                  </motion.h2>
+                  <motion.p 
+                    variants={fadeIn('up', 'tween', 0.2, 0.8)}
+                    className="my-2 text-gray-600 dark:text-gray-300"
+                  >
                     {`I have a wide range of skills that I've developed throughout my career as a software engineer.`}
-                  </p>
-                  <div
-                    className="py-2 grid lg:grid-cols-4 grid-cols-3 gap-4 lg:max-h-screen lg:overflow-y-auto">
+                  </motion.p>
+                  <motion.div
+                    variants={fadeIn('up', 'tween', 0.3, 0.8)}
+                    className="py-4 grid lg:grid-cols-4 grid-cols-3 gap-6 lg:max-h-screen lg:overflow-y-auto"
+                  >
                     {skillsLoading ? (
                       <CardSkeleton/>
                     ) : (
                       skills.map((skill: SkillProps, index: number) => (
-                        <Skill key={index} data={skill}/>
+                        <motion.div
+                          variants={fadeIn('up', 'spring', index * 0.1, 0.75)}
+                          key={index}
+                        >
+                          <Skill data={skill}/>
+                        </motion.div>
                       ))
                     )}
-                  </div>
-                </div>
+                  </motion.div>
+                </motion.div>
               )}
               {resumeTab === 'certificates' && (
                 <div className="mb-12">
