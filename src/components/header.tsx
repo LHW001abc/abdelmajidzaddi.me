@@ -5,9 +5,10 @@ import {scrollToSection} from "@/lib/helper";
 import ThemeSwitcher from "@/components/themeSwitcher";
 import {useTheme} from "@/context/ThemeContext";
 import Image from 'next/image';
+import {logo} from "@/config/app"; // Added this import for the logo
 
 const Header = () => {
-  const { } = useTheme();
+  const { theme } = useTheme(); // Changed to get the theme for the logo
   const [isOpen, setOpen] = useState(false);
   const [, setFixed] = useState(false);
   const [activeSection, setActiveSection] = useState("");
@@ -60,17 +61,20 @@ const Header = () => {
 
       <nav className="container p-4 mx-auto lg:flex lg:justify-between lg:items-center relative z-10">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center">
-            <Image 
-              src="/logo.svg" 
-              alt="Logo" 
-              width={32} 
-              height={32} 
-              className="h-8 w-auto"
-            />
-            <span className="ml-3 text-xl font-bold text-gray-800 dark:text-white">
-              Abdelmajid
-            </span>
+          <Link href="/" className="flex items-center group relative transition-transform duration-300 hover:scale-105">
+            {/* Updated logo implementation similar to footer */}
+            <div className="relative overflow-hidden">
+              <Image
+                className="w-auto h-8 md:h-10 transition-all duration-500"
+                src={theme === 'dark' ? logo.dark : logo.light}
+                alt="Abdelmajid ZADDI"
+                loading="lazy"
+                width={120}
+                height={24}
+              />
+              {/* Logo hover effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-indigo-500/10 dark:from-blue-500/10 dark:to-indigo-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
           </Link>
 
           <div className="flex lg:hidden">
