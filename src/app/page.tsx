@@ -86,7 +86,7 @@ export default function Home() {
   return (
     <div className="lg:px-12 bg-white dark:bg-gray-900">
     <header className="container px-6 py-16 mx-auto">
-    <div className="items-center lg:flex lg:flex-row-reverse hover:bg-blue-50 duration-300 transition-colors">
+    <div className="items-center lg:flex lg:flex-row-reverse duration-300 transition-colors">
           <div className="relative mx-auto mt-4 md:mt-16 lg:mt-0">
             <div className="flex items-center justify-center">
             <Image alt='avatar' width={300} height={300}
@@ -95,42 +95,66 @@ export default function Home() {
             />
             </div>
             <button
-              className="absolute flex -top-14 -left-2 lg:-top-14 lg:-left-32 w-auto h-16 md:h-20 dark:bg-grey-800 place-items-center shadow-blue-500 shadow-md bg-white items-center text-gray-700 dark:text-gray-300 justify-center gap-x-3 text-sm sm:text-base dark:bg-gray-900 dark:border-gray-700 dark:hover:bg-gray-800 rounded-3xl hover:bg-blue-50 duration-300 transition-colors border px-6 py-2">
+              className="absolute flex -top-14 -left-2 lg:-top-14 lg:-left-32 w-auto h-16 md:h-20 dark:bg-grey-800 place-items-center shadow-blue-500 shadow-md bg-white items-center text-gray-700 dark:text-gray-300 justify-center gap-x-3 text-sm sm:text-base dark:bg-gray-900 dark:border-gray-700 dark:hover:bg-gray-800 rounded-3xl hover:bg-blue-50 dark:hover:bg-transparent duration-300 transition-colors border px-6 py-2 hover:border-orange-300 dark:hover:border-orange-600 group"
+            >
               <Image unoptimized={true} alt='waving-hand' width={30} height={30} src="/waving-hand.gif"/>
               <div className="text-start">
-                <span>Hi there!</span>
-                <p className="text-sm text-gray-500">Welcome to my portfolio</p>
+                <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-200 dark:to-white group-hover:from-orange-500 group-hover:to-pink-600 transition-all duration-300">Hi there!</span>
+                <p className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-400 group-hover:to-pink-500 transition-all duration-300">Welcome to my portfolio</p>
               </div>
             </button>
+
             <button
-              className="absolute flex -bottom-8 right-6 lg:-bottom-0 lg:-right-24 w-auto h-16 md:h-20 dark:bg-grey-800 place-items-center shadow-blue-500 shadow-md bg-white items-center text-gray-700 dark:text-gray-300 justify-center gap-x-3 text-sm sm:text-base dark:bg-gray-900 dark:border-gray-700 dark:hover:bg-gray-800 rounded-3xl hover:bg-blue-50 duration-300 transition-colors border px-8 py-2">
+              className="absolute flex -bottom-8 right-6 lg:-bottom-0 lg:-right-24 w-auto h-16 md:h-20 dark:bg-grey-800 place-items-center shadow-blue-500 shadow-md bg-white items-center text-gray-700 dark:text-gray-300 justify-center gap-x-3 text-sm sm:text-base dark:bg-gray-900 dark:border-gray-700 dark:hover:bg-gray-800 rounded-3xl hover:bg-blue-50 dark:hover:bg-transparent duration-300 transition-colors border px-8 py-2 hover:border-orange-300 dark:hover:border-orange-600 group"
+            >
               <div className="text-start">
-                <span>Data Scientist</span>
-                <p className="text-sm text-gray-500">Software Engineer</p>
+                <span className="font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-200 dark:to-white group-hover:from-orange-500 group-hover:to-pink-600 transition-all duration-300">Data Scientist</span>
+                <p className="text-sm text-gray-500 dark:text-gray-400 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-orange-400 group-hover:to-pink-500 transition-all duration-300">Software Engineer</p>
               </div>
             </button>
           </div>
 
-          <div className="w-full lg:w-1/2 mt-24 md:mt-16 lg:mt-0">
-            <div className="lg:max-w-lg">
-              <Title textClass="text-3xl font-semibold text-gray-800 dark:text-gray-100 lg:text-4xl">
-                {`Hi, I'm Abdelmajid ZADDI`}
-              </Title>
-              <h3 className="mt-2 text-2xl font-semibold text-gray-100">
-                <span className="text-blue-400">Data Scientist & Software Engineer</span>
-              </h3>
-              <p className="mt-3 text-gray-600 dark:text-gray-400">
-                {`I'm a software engineer and data scientist with a passion for developing innovative software solutions.`}
-              </p>
-              <div className="mt-6 space-x-4 flex justify-start">
-                <button onClick={() => setResumeModalOpen(true)}
-                        className="px-6 py-2 mt-4 text-sm font-medium text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md lg:w-auto hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-                  Resume
-                </button>
-                <button onClick={() => scrollToSection('contact')}
-                        className="px-5 py-2 mt-4 text-sm font-medium text-gray-700 dark:text-white capitalize transition-colors duration-300 transform border rounded-md hover:bg-gray-700 hover:text-white focus:outline-none focus:bg-blue-500">
-                  Contact me
-                </button>
+          <div className="w-full lg:w-3/5 mt-24 md:mt-16 lg:mt-0">
+            <div className="transform transition-all duration-500 hover:scale-105">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-blue-100 dark:border-gray-700 p-10 md:p-12 relative">
+                {/* Enhanced decorative background elements */}
+                <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-br from-orange-400/30 to-pink-500/30 rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-to-tr from-blue-400/30 to-purple-500/30 rounded-full blur-3xl"></div>
+                
+                {/* Content with z-index to appear above the gradient backgrounds */}
+                <div className="relative z-10">
+                  <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-600 hover:from-pink-600 hover:to-orange-500 transition-all duration-500">
+                    Hi, I'm Abdelmajid ZADDI
+                  </h2>
+                  
+                  <h3 className="mt-4 text-2xl md:text-3xl font-semibold dark:text-blue-400 text-blue-600 flex items-center gap-2">
+                    <span className="inline-block w-3 h-3 bg-blue-500 rounded-full animate-pulse"></span>
+                    Data Scientist & Software Engineer
+                  </h3>
+                  
+                  <p className="mt-6 text-gray-600 dark:text-gray-300 text-xl leading-relaxed">
+                    I'm a software engineer and data scientist with a passion for developing innovative software solutions.
+                  </p>
+                  
+                  <div className="mt-8 flex gap-6 flex-wrap md:flex-nowrap">
+                    <button onClick={() => setResumeModalOpen(true)}
+                          className="px-8 py-4 text-base font-medium text-white capitalize transition-all duration-300 transform bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-600 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5">
+                      My Resume
+                    </button>
+                    <button onClick={() => scrollToSection('contact')}
+                          className="px-8 py-4 text-base font-medium text-gray-700 dark:text-white capitalize transition-all duration-300 transform border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 shadow-sm hover:shadow hover:-translate-y-0.5">
+                      Contact Me
+                    </button>
+                  </div>
+                  
+                  {/* Professional badges - enlarged */}
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <span className="px-4 py-2 text-sm font-medium text-blue-600 bg-blue-100 dark:bg-blue-900 dark:text-blue-300 rounded-full">Python</span>
+                    <span className="px-4 py-2 text-sm font-medium text-green-600 bg-green-100 dark:bg-green-900 dark:text-green-300 rounded-full">Data Science</span>
+                    <span className="px-4 py-2 text-sm font-medium text-purple-600 bg-purple-100 dark:bg-purple-900 dark:text-purple-300 rounded-full">Machine Learning</span>
+                    <span className="px-4 py-2 text-sm font-medium text-orange-600 bg-orange-100 dark:bg-orange-900 dark:text-orange-300 rounded-full">Web Development</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -157,15 +181,57 @@ export default function Home() {
             />
             <div className="mt-2 md:mx-6">
               <div>
-                <p className="text-xl font-medium tracking-tight text-gray-800 dark:text-white">Abdelmajid ZADDI</p>
-                <p className="text-blue-700 dark:text-blue-200 ">A passionate Data Scientist and Software Engineer from Morocco</p>
+                <p className="text-2xl font-medium tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-indigo-600 hover:to-blue-700 transition-all duration-500 hover:shadow-glow">Abdelmajid ZADDI</p>
+                <p className="text-blue-700 dark:text-blue-200">A passionate Data Scientist and Software Engineer from Morocco</p>
               </div>
-              <p className="mt-4 text-lg leading-relaxed text-gray-800 dark:text-white md:text-xl">
-              {`I'm Abdelmajid ZADDI, a software engineer and data scientist with a passion for developing innovative software solutions. I have experience working with various programming languages and technologies, including Python, Java, JavaScript, and SQL. I'm passionate about innovation and love exploring blockchain and artificial intelligence.`}
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-gray-800 dark:text-white md:text-xl">
-                Join me in creating exceptional software experiences and embracing the potential of technology.
-              </p>
+
+              {/* Enhanced bio section with modern styling */}
+              <div className="mt-6 space-y-5">
+                <div className="relative p-4 bg-white/80 dark:bg-gray-800/80 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+                  <div className="absolute -left-1 top-0 h-full w-0.5 bg-gradient-to-b from-blue-500 to-indigo-600 rounded-full"></div>
+                  
+                  <div className="font-['Inter',sans-serif] text-base leading-relaxed text-gray-700 dark:text-gray-200 md:text-lg">
+                    <p className="mb-3">
+                      <span className="font-medium text-blue-600 dark:text-blue-400">I'm Abdelmajid ZADDI</span>, a software engineer and data scientist with a passion for developing innovative software solutions.
+                    </p>
+                    
+                    <p className="mb-3">
+                      I have experience working with various programming languages and technologies, including:
+                    </p>
+                    
+                    {/* Skills with consistent styling */}
+                    <div className="flex flex-wrap gap-2 my-3">
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300">
+                        Python
+                      </span>
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300">
+                        Java
+                      </span>
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300">
+                        JavaScript
+                      </span>
+                      <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">
+                        SQL
+                      </span>
+                    </div>
+                    
+                    <p className="mb-3">
+                      I'm passionate about innovation and love exploring emerging fields like 
+                      <span className="font-medium text-blue-600 dark:text-blue-400"> blockchain</span> and 
+                      <span className="font-medium text-blue-600 dark:text-blue-400"> artificial intelligence</span>.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Call to action with professional styling */}
+                <div className="relative p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl border border-blue-100 dark:border-blue-800/30 group">
+                  <p className="font-['Inter',sans-serif] text-lg md:text-xl font-medium text-gray-800 dark:text-gray-200 leading-relaxed">
+                    Join me in creating exceptional software experiences and embracing the potential of technology.
+                  </p>
+                  
+                  <div className="absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-300 group-hover:w-full"></div>
+                </div>
+              </div>
             </div>
           </div>
         </main>

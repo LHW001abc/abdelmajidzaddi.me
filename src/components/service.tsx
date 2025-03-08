@@ -1,9 +1,43 @@
 import { ServiceProps } from "@/lib/types";
 import Link from "next/link";
 import { useState } from "react";
+import { 
+  Code, 
+  Database, 
+  BarChart3, 
+  Layers, 
+  Smartphone, 
+  Cloud,
+  BrainCircuit, 
+  Rocket 
+} from 'lucide-react';
 
 const Service = ({ data: service }: { data: ServiceProps }) => {
   const [isHovered, setIsHovered] = useState(false);
+  
+  // Function to get the appropriate icon component based on service name
+  const getServiceIcon = () => {
+    const serviceName = service.name.toLowerCase();
+    
+    if (serviceName.includes('data') || serviceName.includes('analytic')) {
+      return <BarChart3 className="w-8 h-8" strokeWidth={1.5} />;
+    } else if (serviceName.includes('web') || serviceName.includes('frontend') || serviceName.includes('ui')) {
+      return <Layers className="w-8 h-8" strokeWidth={1.5} />;
+    } else if (serviceName.includes('ai') || serviceName.includes('machine') || serviceName.includes('intelligence')) {
+      return <BrainCircuit className="w-8 h-8" strokeWidth={1.5} />;
+    } else if (serviceName.includes('mobile') || serviceName.includes('app')) {
+      return <Smartphone className="w-8 h-8" strokeWidth={1.5} />;
+    } else if (serviceName.includes('cloud') || serviceName.includes('devops')) {
+      return <Cloud className="w-8 h-8" strokeWidth={1.5} />;
+    } else if (serviceName.includes('backend') || serviceName.includes('database')) {
+      return <Database className="w-8 h-8" strokeWidth={1.5} />;
+    } else if (serviceName.includes('consult') || serviceName.includes('strategy')) {
+      return <Rocket className="w-8 h-8" strokeWidth={1.5} />;
+    } else {
+      // Default icon for any other service
+      return <Code className="w-8 h-8" strokeWidth={1.5} />;
+    }
+  };
   
   return (
     <div 
@@ -19,7 +53,7 @@ const Service = ({ data: service }: { data: ServiceProps }) => {
       <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-300/20 dark:bg-blue-400/10 rounded-full blur-xl z-0"></div>
       <div className="absolute -left-6 -top-6 w-20 h-20 bg-indigo-300/20 dark:bg-indigo-400/10 rounded-full blur-xl z-0"></div>
       
-      {/* Icon with animated gradient */}
+      {/* Icon with animated gradient - now dynamic based on service type */}
       <div 
         className={`
           relative z-10 w-16 h-16 rounded-full flex items-center justify-center
@@ -29,13 +63,7 @@ const Service = ({ data: service }: { data: ServiceProps }) => {
       >
         <div className="bg-white dark:bg-gray-800 rounded-full w-full h-full flex items-center justify-center">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                    d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-                    d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
-            </svg>
+            {getServiceIcon()}
           </span>
         </div>
       </div>
