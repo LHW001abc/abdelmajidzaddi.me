@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { socials } from "@/config/app";
 import { useState } from "react";
-import Image from 'next/image';
 
 const FindMeCTA = () => {
   const [hoveredIcon, setHoveredIcon] = useState<string | null>(null);
