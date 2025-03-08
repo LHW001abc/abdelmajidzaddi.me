@@ -96,7 +96,7 @@ const ContactForm = () => {
             Get In Touch
           </h3>
           <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm">
-            I'll get back to you as soon as possible
+          I&apos;ll get back to you as soon as possible
           </p>
           <div className={`h-0.5 w-16 mx-auto mt-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 transition-all duration-500 ${formHover ? 'w-32 opacity-100' : 'opacity-70'}`}></div>
         </div>

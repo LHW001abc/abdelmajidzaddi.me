@@ -110,7 +110,7 @@ const FindMeCTA = () => {
           <div className="w-full max-w-2xl mx-auto px-6">
             <p className="mt-12 mb-8 text-lg md:text-xl text-gray-600 dark:text-gray-400 text-center relative group/text">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-700 to-gray-900 dark:from-gray-300 dark:to-white group-hover:from-orange-500 group-hover:to-pink-600 transition-all duration-500 font-medium">
-                Let's connect and discuss how we can work together on your next project!
+                Let&apos;s connect and discuss how we can work together on your next project!
               </span>
               <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-orange-500/5 via-pink-600/5 to-purple-600/5 dark:from-orange-500/10 dark:via-pink-600/10 dark:to-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md"></span>
             </p>

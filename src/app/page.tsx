@@ -124,7 +124,7 @@ export default function Home() {
                 {/* Content with z-index to appear above the gradient backgrounds */}
                 <div className="relative z-10">
                   <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-600 hover:from-pink-600 hover:to-orange-500 transition-all duration-500">
-                    Hi, I'm Abdelmajid ZADDI
+                    Hi, I&apos;m Abdelmajid ZADDI
                   </h2>
                   
                   <h3 className="mt-4 text-2xl md:text-3xl font-semibold dark:text-blue-400 text-blue-600 flex items-center gap-2">
@@ -133,7 +133,7 @@ export default function Home() {
                   </h3>
                   
                   <p className="mt-6 text-gray-600 dark:text-gray-300 text-xl leading-relaxed">
-                    I'm a software engineer and data scientist with a passion for developing innovative software solutions.
+                  I&apos;m a software engineer and data scientist with a passion for developing innovative software solutions.
                   </p>
                   
                   <div className="mt-8 flex gap-6 flex-wrap md:flex-nowrap">
@@ -218,7 +218,7 @@ export default function Home() {
                     </div>
                     
                     <p className="mb-3">
-                      I'm passionate about innovation and love exploring emerging fields like 
+                        I&apos;m passionate about innovation and love exploring emerging fields like 
                       <span className="font-medium text-blue-600 dark:text-blue-400"> blockchain</span> and 
                       <span className="font-medium text-blue-600 dark:text-blue-400"> artificial intelligence</span>.
                     </p>
@@ -450,7 +450,7 @@ export default function Home() {
         <div>
           <h4 className="text-xl font-medium text-blue-500 dark:text-blue-400">Contact me</h4>
           <Title>
-            {`Interested to work together? Let's talk`}
+            {`Interested to work together? Let&apos;s talk`}
           </Title>
         </div>
         <div className="grid grid-cols-1 gap-12 mt-8 lg:grid-cols-2">
