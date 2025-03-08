@@ -11,6 +11,7 @@ const ContactForm = () => {
   });
   const [isSubmitting, setSubmitting] = useState(false);
   const [focusedField, setFocusedField] = useState<string | null>(null);
+  const [formHover, setFormHover] = useState(false);
 
   /**
    * Handle input change
@@ -62,9 +63,10 @@ const ContactForm = () => {
 
   return (
     <div className="relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute -left-20 -bottom-20 w-40 h-40 bg-blue-200/10 dark:bg-blue-400/5 rounded-full blur-xl"></div>
-      <div className="absolute -right-20 -top-20 w-40 h-40 bg-indigo-200/10 dark:bg-indigo-400/5 rounded-full blur-xl"></div>
+      {/* Enhanced background decorative elements */}
+      <div className={`absolute -left-20 -bottom-20 w-40 h-40 bg-blue-200/10 dark:bg-blue-400/10 rounded-full blur-xl transition-all duration-700 ${formHover ? 'scale-125 opacity-100' : 'scale-100 opacity-60'}`}></div>
+      <div className={`absolute -right-20 -top-20 w-40 h-40 bg-indigo-200/10 dark:bg-indigo-400/10 rounded-full blur-xl transition-all duration-700 ${formHover ? 'scale-125 opacity-100' : 'scale-100 opacity-60'}`}></div>
+      <div className={`absolute left-1/2 top-1/3 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-purple-200/5 dark:bg-purple-400/5 rounded-full blur-xl transition-all duration-700 ${formHover ? 'scale-150 opacity-80' : 'scale-100 opacity-0'}`}></div>
       
       <ToastContainer 
         position="top-center" 
@@ -80,9 +82,25 @@ const ContactForm = () => {
       />
       
       <form 
-        className="w-full max-w-lg mx-auto relative z-10 overflow-hidden rounded-xl shadow-lg bg-white dark:bg-gray-800 p-6 border border-gray-100 dark:border-gray-700 transition-all duration-300 hover:shadow-xl dark:hover:shadow-blue-900/10"
+        className="w-full max-w-lg mx-auto relative z-10 overflow-hidden rounded-xl shadow-lg bg-white dark:bg-gray-800/90 p-6 border border-gray-100 dark:border-gray-700 backdrop-blur-sm transition-all duration-500 hover:shadow-xl dark:hover:shadow-blue-900/20"
         onSubmit={handleSubmit}
+        onMouseEnter={() => setFormHover(true)}
+        onMouseLeave={() => setFormHover(false)}
+        style={{
+          transform: formHover ? 'translateY(-4px)' : 'translateY(0px)'
+        }}
       >
+        {/* Form header with subtle glow */}
+        <div className={`mb-6 text-center transition-all duration-500 ${formHover ? 'scale-105' : 'scale-100'}`}>
+          <h3 className="text-xl md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400">
+            Get In Touch
+          </h3>
+          <p className="text-gray-600 dark:text-gray-300 mt-1 text-sm">
+            I'll get back to you as soon as possible
+          </p>
+          <div className={`h-0.5 w-16 mx-auto mt-2 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 transition-all duration-500 ${formHover ? 'w-32 opacity-100' : 'opacity-70'}`}></div>
+        </div>
+
         <div className="-mx-2 md:items-center md:flex space-y-4 md:space-y-0">
           <div className="flex-1 px-2">
             <div className="relative">
@@ -109,14 +127,14 @@ const ContactForm = () => {
                 className={`
                   block w-full px-5 py-3 mt-2
                   text-gray-700 placeholder-gray-400 
-                  bg-white dark:bg-gray-900 
+                  bg-white dark:bg-gray-900/80 
                   border-2 rounded-lg 
                   dark:placeholder-gray-600 dark:text-gray-300 
                   dark:border-gray-700
                   transition-all duration-300
                   ${focusedField === 'name' ? 
-                    'border-blue-400 dark:border-blue-500 shadow-sm shadow-blue-500/20' : 
-                    'border-gray-200 dark:border-gray-700'
+                    'border-blue-400 dark:border-blue-500 shadow-md shadow-blue-500/20' : 
+                    formHover ? 'border-blue-300/50 dark:border-blue-700/50' : 'border-gray-200 dark:border-gray-700'
                   }
                   focus:outline-none focus:ring-0
                 `}
@@ -125,7 +143,7 @@ const ContactForm = () => {
                 className={`
                   block h-0.5 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full
                   transition-all duration-500 mt-0.5
-                  ${focusedField === 'name' || hasValue('name') ? 'w-full opacity-100' : 'w-0 opacity-0'}
+                  ${focusedField === 'name' || hasValue('name') ? 'w-full opacity-100' : formHover ? 'w-1/2 opacity-50' : 'w-0 opacity-0'}
                 `}
               ></span>
             </div>
@@ -156,14 +174,14 @@ const ContactForm = () => {
                 className={`
                   block w-full px-5 py-3 mt-2
                   text-gray-700 placeholder-gray-400 
-                  bg-white dark:bg-gray-900 
+                  bg-white dark:bg-gray-900/80 
                   border-2 rounded-lg 
                   dark:placeholder-gray-600 dark:text-gray-300 
                   dark:border-gray-700
                   transition-all duration-300
                   ${focusedField === 'email' ? 
-                    'border-blue-400 dark:border-blue-500 shadow-sm shadow-blue-500/20' : 
-                    'border-gray-200 dark:border-gray-700'
+                    'border-blue-400 dark:border-blue-500 shadow-md shadow-blue-500/20' : 
+                    formHover ? 'border-blue-300/50 dark:border-blue-700/50' : 'border-gray-200 dark:border-gray-700'
                   }
                   focus:outline-none focus:ring-0
                 `}
@@ -172,7 +190,7 @@ const ContactForm = () => {
                 className={`
                   block h-0.5 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full
                   transition-all duration-500 mt-0.5
-                  ${focusedField === 'email' || hasValue('email') ? 'w-full opacity-100' : 'w-0 opacity-0'}
+                  ${focusedField === 'email' || hasValue('email') ? 'w-full opacity-100' : formHover ? 'w-1/2 opacity-50' : 'w-0 opacity-0'}
                 `}
               ></span>
             </div>
@@ -204,14 +222,14 @@ const ContactForm = () => {
               className={`
                 block w-full px-5 py-3 mt-2
                 text-gray-700 placeholder-gray-400 
-                bg-white dark:bg-gray-900 
+                bg-white dark:bg-gray-900/80 
                 border-2 rounded-lg 
                 dark:placeholder-gray-600 dark:text-gray-300 
                 dark:border-gray-700
                 transition-all duration-300
                 ${focusedField === 'subject' ? 
-                  'border-blue-400 dark:border-blue-500 shadow-sm shadow-blue-500/20' : 
-                  'border-gray-200 dark:border-gray-700'
+                  'border-blue-400 dark:border-blue-500 shadow-md shadow-blue-500/20' : 
+                  formHover ? 'border-blue-300/50 dark:border-blue-700/50' : 'border-gray-200 dark:border-gray-700'
                 }
                 focus:outline-none focus:ring-0
               `}
@@ -220,7 +238,7 @@ const ContactForm = () => {
               className={`
                 block h-0.5 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full
                 transition-all duration-500 mt-0.5
-                ${focusedField === 'subject' || hasValue('subject') ? 'w-full opacity-100' : 'w-0 opacity-0'}
+                ${focusedField === 'subject' || hasValue('subject') ? 'w-full opacity-100' : formHover ? 'w-1/2 opacity-50' : 'w-0 opacity-0'}
               `}
             ></span>
           </div>
@@ -250,15 +268,15 @@ const ContactForm = () => {
               className={`
                 block w-full h-32 px-5 py-3 mt-2
                 text-gray-700 placeholder-gray-400 
-                bg-white dark:bg-gray-900 
+                bg-white dark:bg-gray-900/80 
                 border-2 rounded-lg 
                 dark:placeholder-gray-600 dark:text-gray-300 
                 dark:border-gray-700
                 transition-all duration-300
                 resize-none
                 ${focusedField === 'message' ? 
-                  'border-blue-400 dark:border-blue-500 shadow-sm shadow-blue-500/20' : 
-                  'border-gray-200 dark:border-gray-700'
+                  'border-blue-400 dark:border-blue-500 shadow-md shadow-blue-500/20' : 
+                  formHover ? 'border-blue-300/50 dark:border-blue-700/50' : 'border-gray-200 dark:border-gray-700'
                 }
                 focus:outline-none focus:ring-0
               `}
@@ -267,7 +285,7 @@ const ContactForm = () => {
               className={`
                 block h-0.5 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full
                 transition-all duration-500 mt-0.5
-                ${focusedField === 'message' || hasValue('message') ? 'w-full opacity-100' : 'w-0 opacity-0'}
+                ${focusedField === 'message' || hasValue('message') ? 'w-full opacity-100' : formHover ? 'w-1/2 opacity-50' : 'w-0 opacity-0'}
               `}
             ></span>
           </div>
@@ -275,10 +293,14 @@ const ContactForm = () => {
 
         <button
           disabled={isSubmitting}
-          className="relative overflow-hidden w-full px-6 py-3.5 mt-8 text-sm font-medium tracking-wide text-white capitalize transition-all duration-500 transform 
-                    bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700
-                    rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50
-                    shadow-md hover:shadow-lg hover:shadow-blue-500/30"
+          className={`
+            relative overflow-hidden w-full px-6 py-3.5 mt-8 text-sm font-medium tracking-wide text-white capitalize
+            transition-all duration-500 transform 
+            bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700
+            rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50
+            shadow-md hover:shadow-lg hover:shadow-blue-500/30
+            ${formHover ? 'scale-105' : 'scale-100'}
+          `}
         >
           {/* Button text */}
           <span className="relative z-10">
@@ -295,25 +317,15 @@ const ContactForm = () => {
             )}
           </span>
           
-          {/* Button shine effect */}
-          <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white/20 opacity-40 animate-shine"></div>
+          {/* Enhanced button shine effect */}
+          <div className="absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent to-white/20 opacity-40 animate-[shine_4s_ease-in-out_infinite]"></div>
         </button>
       </form>
+
+      {/* Enhanced shine effect along the edges */}
+      <div className={`absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/20 to-indigo-500/20 blur-lg transition-all duration-500 opacity-0 ${formHover ? 'opacity-60' : ''}`}></div>
     </div>
   );
 };
-
-// Add this to your global CSS file:
-// @keyframes shine {
-//   0% {
-//     left: -100%;
-//   }
-//   100% {
-//     left: 200%;
-//   }
-// }
-// .animate-shine {
-//   animation: shine 3s infinite;
-// }
 
 export default ContactForm;

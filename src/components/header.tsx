@@ -63,28 +63,32 @@ const Header = () => {
   return (
     <section 
       className={`
-        bg-white/95 dark:bg-gray-900/95 backdrop-blur-md
-        transition-all duration-300 ease-out
-        ${isFixed ? 'fixed top-0 w-full z-50 shadow-lg animate-slideDown' : ''}
+        bg-white/90 dark:bg-gray-900/95 backdrop-blur-lg
+        transition-all duration-500 ease-out
+        ${isFixed ? 'fixed top-0 w-full z-50 shadow-xl shadow-purple-500/10 dark:shadow-purple-800/10 animate-slideDown' : ''}
+        border-b border-purple-100 dark:border-purple-900/40
       `}
     >
-      <nav className="container p-4 mx-auto lg:flex lg:justify-between lg:items-center">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 via-blue-500/5 to-violet-500/5 dark:from-purple-500/10 dark:via-blue-600/10 dark:to-violet-600/10 opacity-60"></div>
+
+      <nav className="container p-4 mx-auto lg:flex lg:justify-between lg:items-center relative z-10">
         {/* Logo */}
         <div className="flex items-center justify-between">
           <Link href="/" className="group">
-            <div className="relative overflow-hidden">
-              <Image
-                className="w-auto h-14 transition-transform duration-500 group-hover:scale-105"
+            <div className="relative overflow-hidden rounded-lg">
+              <img
+                className="w-auto h-14 transition-transform duration-500 group-hover:scale-110"
                 src={theme === 'dark' ? logo.dark : logo.light}
-                alt="Ismail ZAHIR"
-                width={160}
-                height={32}
+                alt="Abdelmajid ZADDI"
                 loading="lazy"
               />
-              {/* Logo hover effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-indigo-500/10 dark:from-blue-500/10 dark:to-indigo-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              {/* Logo hover effect - enhanced glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 via-blue-500/20 to-violet-500/20 
+                            dark:from-purple-500/30 dark:via-blue-600/30 dark:to-violet-600/30 
+                            opacity-0 group-hover:opacity-100 transition-all duration-500 
+                            group-hover:blur-sm"></div>
             </div>
-            <span className="sr-only">{`Ismail ZAHIR's Portfolio`}</span>
+            <span className="sr-only">{`Abdelmajid ZADDI's Portfolio`}</span>
           </Link>
 
           {/* Mobile menu toggle button */}
@@ -92,8 +96,8 @@ const Header = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none 
-                         transition-transform duration-300 ease-in-out hover:scale-105"
+              className="text-gray-500 dark:text-gray-200 hover:text-purple-600 dark:hover:text-purple-400 focus:outline-none 
+                         transition-all duration-300 ease-in-out hover:scale-110"
               aria-label="toggle menu"
             >
               {!isOpen ? (
@@ -118,9 +122,9 @@ const Header = () => {
 
         {/* Nav items container */}
         <div
-          className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out 
-                     bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-md 
-                     dark:shadow-gray-800/20 lg:shadow-none lg:mt-0 lg:p-0 lg:top-0 
+          className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-500 ease-in-out 
+                     bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-md 
+                     shadow-purple-500/5 dark:shadow-purple-800/5 lg:shadow-none lg:mt-0 lg:p-0 lg:top-0 
                      lg:bg-transparent lg:dark:bg-transparent lg:relative lg:w-auto 
                      lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center ${
             isOpen ? 'translate-x-0 opacity-100' : 'opacity-0 -translate-x-full lg:opacity-100 lg:translate-x-0'
@@ -129,7 +133,7 @@ const Header = () => {
           {/* Nav links */}
           <div className="flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:space-y-0">
             {navItems.map((item, index) => (
-              <div key={index} className="relative group lg:mx-3">
+              <div key={index} className="relative group lg:mx-4">
                 <span 
                   onClick={() => {
                     scrollToSection(item.href);
@@ -138,19 +142,22 @@ const Header = () => {
      
                   className={`
                     inline-block text-gray-700 dark:text-gray-200 
-                    transition-colors duration-300 cursor-pointer
-                    hover:text-blue-500 dark:hover:text-blue-400
-                    ${activeSection === item.link ? 'text-blue-600 dark:text-blue-400 font-medium' : ''}
+                    transition-all duration-300 cursor-pointer py-2 px-3 rounded-lg
+                    group-hover:text-purple-600 dark:group-hover:text-purple-400
+                    group-hover:bg-purple-50 dark:group-hover:bg-purple-900/20
+                    ${activeSection === item.link ? 
+                      'text-purple-600 dark:text-purple-400 font-medium bg-purple-50 dark:bg-purple-900/20' : ''}
                   `}
                 >
                   {item.name}
                 </span>
-                {/* Animated underline */}
+                {/* Animated magical underline with glow */}
                 <span className={`
                   absolute -bottom-1 left-0 w-0 h-0.5
-                  bg-gradient-to-r from-blue-500 to-indigo-600
-                  transition-all duration-300 ease-out rounded-full
-                  ${activeSection === item.link ? 'w-full' : 'group-hover:w-full'}
+                  bg-gradient-to-r from-purple-500 via-blue-500 to-violet-500
+                  transition-all duration-500 ease-out rounded-full
+                  group-hover:w-full group-hover:shadow-glow-sm
+                  ${activeSection === item.link ? 'w-full shadow-glow-sm' : ''}
                 `}></span>
               </div>
             ))}
@@ -166,33 +173,26 @@ const Header = () => {
           >
             <span className={`
               block px-5 py-2 text-sm text-center text-gray-700 dark:text-white
-              border border-gray-300 dark:border-gray-700 rounded-md 
-              transition-all duration-300 transform cursor-pointer
-              bg-transparent hover:bg-gradient-to-r hover:from-blue-500 hover:to-indigo-600
-              hover:text-white hover:border-transparent
-              ${activeSection === "contact" ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white border-transparent' : ''}
+              border border-purple-200 dark:border-purple-800 rounded-lg
+              transition-all duration-500 transform cursor-pointer
+              bg-transparent hover:bg-gradient-to-r hover:from-purple-500 hover:via-blue-500 hover:to-violet-500
+              hover:text-white hover:border-transparent hover:shadow-glow
+              ${activeSection === "contact" ? 'bg-gradient-to-r from-purple-500 via-blue-500 to-violet-500 text-white border-transparent shadow-glow' : ''}
             `}>
-              Contact Us
+              Contact Me
             </span>
-            {/* Button hover effect */}
-            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500/10 to-indigo-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            {/* Button hover effect - ethereal glow */}
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-violet-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:blur-md"></span>
           </div>
           
           {/* Theme switcher */}
-          <ThemeSwitcher/>
+          <div className="mt-4 lg:mt-0 lg:ml-6">
+            <ThemeSwitcher/>
+          </div>
         </div>
       </nav>
     </section>
   );
 };
-
-// Add this CSS to your global styles
-// @keyframes slideDown {
-//   from { transform: translateY(-100%); }
-//   to { transform: translateY(0); }
-// }
-// .animate-slideDown {
-//   animation: slideDown 0.3s ease-out forwards;
-// }
 
 export default Header;
