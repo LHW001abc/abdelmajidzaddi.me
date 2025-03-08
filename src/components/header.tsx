@@ -4,13 +4,12 @@ import Link from "next/link";
 import {scrollToSection} from "@/lib/helper";
 import ThemeSwitcher from "@/components/themeSwitcher";
 import {useTheme} from "@/context/ThemeContext";
-import {logo} from "@/config/app";
 import Image from 'next/image';
 
 const Header = () => {
-  const { theme } = useTheme();
+  const { } = useTheme();
   const [isOpen, setOpen] = useState(false);
-  const [isFixed, setFixed] = useState(false);
+  const [, setFixed] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
   const navItems = useMemo(() => [
@@ -27,18 +26,13 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Fixed header logic
       if (window.scrollY > 80) {
         setFixed(true);
       } else {
         setFixed(false);
       }
 
-      // Active section detection
       const sections = navItems.map(item => item.link);
-      
-      // No need to push "contact" as it's already included in navItems
-      // sections.push("contact");
 
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -65,7 +59,6 @@ const Header = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 via-blue-500/5 to-violet-500/5 dark:from-purple-500/10 dark:via-blue-600/10 dark:to-violet-600/10 opacity-60"></div>
 
       <nav className="container p-4 mx-auto lg:flex lg:justify-between lg:items-center relative z-10">
-        {/* Logo */}
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image 
@@ -80,7 +73,6 @@ const Header = () => {
             </span>
           </Link>
 
-          {/* Mobile menu toggle button */}
           <div className="flex lg:hidden">
             <button
               onClick={toggleMenu}
@@ -109,7 +101,6 @@ const Header = () => {
           </div>
         </div>
 
-        {/* Nav items container */}
         <div
           className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-500 ease-in-out 
                      bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-md 
@@ -119,7 +110,6 @@ const Header = () => {
             isOpen ? 'translate-x-0 opacity-100' : 'opacity-0 -translate-x-full lg:opacity-100 lg:translate-x-0'
           }`}
         >
-          {/* Nav links */}
           <div className="flex flex-col space-y-4 lg:mt-0 lg:flex-row lg:space-y-0">
             {navItems.map((item, index) => (
               <div key={index} className="relative group lg:mx-4">
@@ -140,7 +130,6 @@ const Header = () => {
                 >
                   {item.name}
                 </span>
-                {/* Animated magical underline with glow */}
                 <span className={`
                   absolute -bottom-1 left-0 w-0 h-0.5
                   bg-gradient-to-r from-purple-500 via-blue-500 to-violet-500
@@ -152,7 +141,6 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Contact button */}
           <div 
             className="relative mt-4 lg:mt-0 lg:ml-6 overflow-hidden group"
             onClick={() => {
@@ -170,11 +158,9 @@ const Header = () => {
             `}>
               Contact Me
             </span>
-            {/* Button hover effect - ethereal glow */}
             <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-violet-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 group-hover:blur-md"></span>
           </div>
           
-          {/* Theme switcher */}
           <div className="mt-4 lg:mt-0 lg:ml-6">
             <ThemeSwitcher/>
           </div>

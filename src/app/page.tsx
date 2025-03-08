@@ -456,7 +456,7 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-12 mt-8 lg:grid-cols-2">
           <div className="grid gap-4">
             <p className="text-gray-500 dark:text-gray-400">
-              {`I'm available for freelance work. If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then get in touch.`}
+              {`I&apos;m available for freelance work. If you have a project that you want to get started, think you need my help with something or just fancy saying hey, then get in touch.`}
             </p>
             <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
               <div>
