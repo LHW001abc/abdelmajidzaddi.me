@@ -194,7 +194,7 @@ export default function Home() {
                   
                   <div className="font-['Inter',sans-serif] text-base leading-relaxed text-gray-700 dark:text-gray-200 md:text-lg">
                     <p className="mb-3">
-                      <span className="font-medium text-blue-600 dark:text-blue-400">I'm Abdelmajid ZADDI</span>, a software engineer and data scientist with a passion for developing innovative software solutions.
+                      <span className="font-medium text-blue-600 dark:text-blue-400">I&apos;m Abdelmajid ZADDI</span>, a software engineer and data scientist with a passion for developing innovative software solutions.
                     </p>
                     
                     <p className="mb-3">
