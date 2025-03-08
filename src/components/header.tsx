@@ -61,34 +61,23 @@ const Header = () => {
   }, [navItems]);
 
   return (
-    <section 
-      className={`
-        bg-white/90 dark:bg-gray-900/95 backdrop-blur-lg
-        transition-all duration-500 ease-out
-        ${isFixed ? 'fixed top-0 w-full z-50 shadow-xl shadow-purple-500/10 dark:shadow-purple-800/10 animate-slideDown' : ''}
-        border-b border-purple-100 dark:border-purple-900/40
-      `}
-    >
+    <header className="sticky top-0 z-50 w-full bg-white dark:bg-gray-900 bg-opacity-80 dark:bg-opacity-80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
       <div className="absolute inset-0 bg-gradient-to-r from-purple-400/5 via-blue-500/5 to-violet-500/5 dark:from-purple-500/10 dark:via-blue-600/10 dark:to-violet-600/10 opacity-60"></div>
 
       <nav className="container p-4 mx-auto lg:flex lg:justify-between lg:items-center relative z-10">
         {/* Logo */}
         <div className="flex items-center justify-between">
-          <Link href="/" className="group">
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                className="w-auto h-14 transition-transform duration-500 group-hover:scale-110"
-                src={theme === 'dark' ? logo.dark : logo.light}
-                alt="Abdelmajid ZADDI"
-                loading="lazy"
-              />
-              {/* Logo hover effect - enhanced glow */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400/20 via-blue-500/20 to-violet-500/20 
-                            dark:from-purple-500/30 dark:via-blue-600/30 dark:to-violet-600/30 
-                            opacity-0 group-hover:opacity-100 transition-all duration-500 
-                            group-hover:blur-sm"></div>
-            </div>
-            <span className="sr-only">{`Abdelmajid ZADDI's Portfolio`}</span>
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/logo.svg" 
+              alt="Logo" 
+              width={32} 
+              height={32} 
+              className="h-8 w-auto"
+            />
+            <span className="ml-3 text-xl font-bold text-gray-800 dark:text-white">
+              Abdelmajid
+            </span>
           </Link>
 
           {/* Mobile menu toggle button */}
@@ -191,7 +180,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-    </section>
+    </header>
   );
 };
 
