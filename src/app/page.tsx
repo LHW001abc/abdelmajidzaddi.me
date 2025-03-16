@@ -213,7 +213,7 @@ export default function Home() {
                         JavaScript
                       </span>
                       <span className="inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300">
-                        SQL
+                        Langchain
                       </span>
                     </div>
                     
@@ -249,19 +249,19 @@ export default function Home() {
             {`I offer a wide range of services to help you achieve your goals. I'm here to help you with your projects, whether you're a startup or a large company.`}
           </p>
 
-          <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-            {servicesLoading ? (
-              <>
-                <CardSkeleton/>
-                <CardSkeleton/>
-                <CardSkeleton/>
-              </>
-            ) : (
-              services.map((service: ServiceProps, index: number) => (
+          {servicesLoading ? (
+            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+              <CardSkeleton type="web" />
+              <CardSkeleton type="ai" />
+              <CardSkeleton type="computer-vision" />
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+              {services.map((service: ServiceProps, index: number) => (
                 <Service key={index} data={service}/>
-              ))
-            )}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -300,8 +300,8 @@ export default function Home() {
                   <div className="py-2 grid lg:grid-cols-2 gap-4 lg:max-h-screen lg:overflow-y-auto">
                     {experiencesLoading ? (
                       <>
-                        <CardSkeleton/>
-                        <CardSkeleton/>
+                        <CardSkeleton type="web" />
+                        <CardSkeleton type="ai" />
                       </>
                     ) : (
                       experiences.map((experience: ExperienceProps, index: number) => (
