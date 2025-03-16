@@ -149,10 +149,10 @@ export default function Home() {
                   
                   {/* Professional badges - enlarged */}
                   <div className="mt-8 flex flex-wrap gap-3">
-                    <span className="px-4 py-2 text-sm font-medium text-blue-600 bg-blue-100 dark:bg-blue-900 dark:text-blue-300 rounded-full">Python</span>
-                    <span className="px-4 py-2 text-sm font-medium text-green-600 bg-green-100 dark:bg-green-900 dark:text-green-300 rounded-full">Data Science</span>
-                    <span className="px-4 py-2 text-sm font-medium text-purple-600 bg-purple-100 dark:bg-purple-900 dark:text-purple-300 rounded-full">Machine Learning</span>
-                    <span className="px-4 py-2 text-sm font-medium text-orange-600 bg-orange-100 dark:bg-orange-900 dark:text-orange-300 rounded-full">Web Development</span>
+                    <span className="px-4 py-2 text-sm font-medium text-blue-600 bg-blue-100 dark:bg-blue-900 dark:text-blue-300 rounded-full">Data Science</span>
+                    <span className="px-4 py-2 text-sm font-medium text-green-600 bg-green-100 dark:bg-green-900 dark:text-green-300 rounded-full">Data Engineering</span>
+                    <span className="px-4 py-2 text-sm font-medium text-purple-600 bg-purple-100 dark:bg-purple-900 dark:text-purple-300 rounded-full">software Engineering</span>
+                    <span className="px-4 py-2 text-sm font-medium text-orange-600 bg-orange-100 dark:bg-orange-900 dark:text-orange-300 rounded-full">Machine Learning</span>
                   </div>
                 </div>
               </div>
