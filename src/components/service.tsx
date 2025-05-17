@@ -15,6 +15,21 @@ const Service = ({ data: service }: { data: ServiceProps }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
+      {/* Background image layer */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('/icons/web-dev.jpg')",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          opacity: 0.1,
+          filter: "blur(1px)",
+          mixBlendMode: "multiply",
+          borderRadius: "inherit"
+        }}
+      />
+      
       {/* Background decoration elements */}
       <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-300/20 dark:bg-blue-400/10 rounded-full blur-xl z-0"></div>
       <div className="absolute -left-6 -top-6 w-20 h-20 bg-indigo-300/20 dark:bg-indigo-400/10 rounded-full blur-xl z-0"></div>
