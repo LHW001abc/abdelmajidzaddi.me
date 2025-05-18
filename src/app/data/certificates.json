@@ -141,5 +141,14 @@
     "issuedAt": "Oct 2021",
     "issuedBy": "DataCamp",
     "featured": true
+  },
+  {
+    "title": "Golang",
+    "credential_id": "CT-LZIWDBCP",
+    "image": "/certificates/Go.png",
+    "issuedAt": "Oct 2021",
+    "issuedBy": "KodeKloud",
+    "featured": true
   }
+
 ]

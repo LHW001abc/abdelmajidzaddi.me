@@ -84,7 +84,7 @@
     "slug": "automatic-speech-recognition",
     "excerpt": "Speech recognition system for converting audio to text",
     "overview": "Advanced speech recognition system that converts spoken language into written text",
-    "image": "/projects/P2.png",
+    "image": "/projects/p2.png",
     "category": "ML",
     "timeline": {
       "start": "2024",
@@ -303,7 +303,7 @@
     "slug": "checkers-game",
     "excerpt": "Desktop Checkers game developed with C and GTK+ for a rich graphical user experience.",
     "overview": "Developed desktop game \"Checkers\" using C programming language and GTK graphical user interface.",
-    "image": "/placeholder.svg?height=200&width=300",
+    "image": "/projects/checkers.png",
     "category": "Desktop Game",
     "timeline": {
       "start": "Mar 2023",
