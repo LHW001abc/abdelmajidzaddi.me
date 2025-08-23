@@ -1,5 +1,6 @@
 import { ServiceProps } from "@/lib/types";
 import Link from "next/link";
+import ElectricBorder from './ElectricBorder';
 import { 
   Code, 
   Database, 
@@ -50,7 +51,8 @@ const Service = ({ data: service }: { data: ServiceProps }) => {
         bg: 'bg-purple-500/10',
         border: 'border-purple-200/30 dark:border-purple-800/30',
         text: 'text-purple-600 dark:text-purple-400',
-        shadow: 'hover:shadow-purple-500/20'
+        shadow: 'hover:shadow-purple-500/20',
+        electric: '#9333ea' // purple-500
       };
     } else if (serviceName.includes('web') || serviceName.includes('frontend') || serviceName.includes('ui')) {
       return {
@@ -58,7 +60,8 @@ const Service = ({ data: service }: { data: ServiceProps }) => {
         bg: 'bg-blue-500/10',
         border: 'border-blue-200/30 dark:border-blue-800/30',
         text: 'text-blue-600 dark:text-blue-400',
-        shadow: 'hover:shadow-blue-500/20'
+        shadow: 'hover:shadow-blue-500/20',
+        electric: '#06b6d4' // cyan-500
       };
     } else {
       return {
@@ -66,7 +69,8 @@ const Service = ({ data: service }: { data: ServiceProps }) => {
         bg: 'bg-indigo-500/10',
         border: 'border-indigo-200/30 dark:border-indigo-800/30',
         text: 'text-indigo-600 dark:text-indigo-400',
-        shadow: 'hover:shadow-indigo-500/20'
+        shadow: 'hover:shadow-indigo-500/20',
+        electric: '#6366f1' // indigo-500
       };
     }
   };
@@ -74,18 +78,25 @@ const Service = ({ data: service }: { data: ServiceProps }) => {
   const colors = getCategoryColor();
   
   return (
-    <div 
-      className={`group relative p-8 space-y-4 rounded-2xl flex flex-col h-full
-                 bg-gradient-to-br from-white via-gray-50/50 to-blue-50/30 
-                 dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-800/80 dark:to-gray-700/50
-                 border border-gray-200/60 dark:border-gray-700/60
-                 transition-all duration-500 ease-out transform 
-                 hover:scale-[1.02] hover:-translate-y-2
-                 hover:shadow-2xl ${colors.shadow}
-                 hover:from-white hover:via-blue-50/30 hover:to-indigo-50/40
-                 dark:hover:from-gray-800 dark:hover:via-gray-700/80 dark:hover:to-gray-600/50
-                 overflow-hidden backdrop-blur-sm`}
+    <ElectricBorder
+      color={colors.electric}
+      speed={0.8}
+      chaos={0.6}
+      thickness={1}
+      style={{ borderRadius: 16 }}
+      className="h-full"
     >
+      <div 
+        className={`group relative p-8 space-y-4 rounded-2xl flex flex-col h-full
+                   bg-gradient-to-br from-white via-gray-50/50 to-blue-50/30 
+                   dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-800/80 dark:to-gray-700/50
+                   transition-all duration-500 ease-out transform 
+                   hover:scale-[1.02] hover:-translate-y-2
+                   hover:shadow-2xl ${colors.shadow}
+                   hover:from-white hover:via-blue-50/30 hover:to-indigo-50/40
+                   dark:hover:from-gray-800 dark:hover:via-gray-700/80 dark:hover:to-gray-600/50
+                   overflow-hidden backdrop-blur-sm`}
+      >
       {/* Animated Background Gradient */}
       <div className={`absolute inset-0 bg-gradient-to-br ${colors.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
       
@@ -198,7 +209,8 @@ const Service = ({ data: service }: { data: ServiceProps }) => {
 
       {/* Hover overlay effect */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 via-transparent to-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-    </div>
+      </div>
+    </ElectricBorder>
   );
 }
 
