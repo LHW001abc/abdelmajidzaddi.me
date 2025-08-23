@@ -1,0 +1,120 @@
+/* Animated Technologies Styles */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes tech-item-hover {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(1deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(0deg);
+  }
+}
+
+.animate-marquee {
+  animation-play-state: running;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.tech-item {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-item:hover {
+  animation: tech-item-hover 0.6s ease-in-out;
+}
+
+/* Ensure smooth performance */
+.marquee-container {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Gradient overlays for fade effect */
+.marquee-fade-left {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.8) 20%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.dark .marquee-fade-left {
+  background: linear-gradient(
+    to right,
+    rgba(17, 24, 39, 1) 0%,
+    rgba(17, 24, 39, 0.8) 20%,
+    rgba(17, 24, 39, 0) 100%
+  );
+}
+
+.marquee-fade-right {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.8) 20%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.dark .marquee-fade-right {
+  background: linear-gradient(
+    to left,
+    rgba(17, 24, 39, 1) 0%,
+    rgba(17, 24, 39, 0.8) 20%,
+    rgba(17, 24, 39, 0) 100%
+  );
+}
+
+/* Accessibility - Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none !important;
+  }
+  
+  .tech-item {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+  
+  .tech-item:hover {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .animate-marquee {
+    animation-duration: 45s !important;
+  }
+  
+  .tech-item {
+    min-width: 120px;
+    margin: 0 0.75rem;
+    padding: 0.75rem;
+  }
+}
