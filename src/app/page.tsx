@@ -124,7 +124,7 @@ export default function Home() {
                   
                   <h2 className="relative text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                     {/* "Hi, I'm" in elegant gray */}
-                    <span className="text-gray-800 dark:text-gray-200 block mb-2">Hi, I'm</span>
+                    <span className="text-gray-800 dark:text-gray-200 block mb-2">Hi, I&apos;m</span>
                     
                     {/* Name with stunning gradient and effects */}
                     <span className="relative inline-block">
@@ -254,7 +254,7 @@ export default function Home() {
             {/* Introduction */}
             <div className="mb-8">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Hello, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Abdelmajid ZADDI</span>
+                Hello, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Abdelmajid ZADDI</span>
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 A passionate AI Engineer and Software Engineer from Morocco, dedicated to developing innovative software solutions that make a difference.
@@ -308,7 +308,7 @@ export default function Home() {
             {/* CTA */}
             <div className="pt-8">
               <p className="text-lg font-medium text-gray-800 dark:text-gray-200 mb-4">
-                Let's create exceptional software experiences together.
+                Let&apos;s create exceptional software experiences together.
               </p>
               <div className="flex gap-4">
                 <button 
