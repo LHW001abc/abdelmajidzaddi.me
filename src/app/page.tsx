@@ -89,9 +89,9 @@ export default function Home() {
     <div className="items-center lg:flex lg:flex-row-reverse duration-300 transition-colors">
           <div className="relative mx-auto mt-4 md:mt-16 lg:mt-0">
             <div className="flex items-center justify-center">
-            <Image alt='avatar' width={300} height={300}
+            <Image alt='avatar' width={500} height={500}
                    className="rounded-full object-cover"
-                   src="/profile.svg"
+                   src="/me.jpg"
             />
             </div>
             <button
