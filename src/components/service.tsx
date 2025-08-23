@@ -1,6 +1,5 @@
 import { ServiceProps } from "@/lib/types";
 import Link from "next/link";
-import { useState } from "react";
 import { 
   Code, 
   Database, 
@@ -16,7 +15,6 @@ import {
 } from 'lucide-react';
 
 const Service = ({ data: service }: { data: ServiceProps }) => {
-  const [isHovered, setIsHovered] = useState(false);
   
   // Function to get the appropriate icon component based on service name
   const getServiceIcon = () => {
@@ -87,8 +85,6 @@ const Service = ({ data: service }: { data: ServiceProps }) => {
                  hover:from-white hover:via-blue-50/30 hover:to-indigo-50/40
                  dark:hover:from-gray-800 dark:hover:via-gray-700/80 dark:hover:to-gray-600/50
                  overflow-hidden backdrop-blur-sm`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
     >
       {/* Animated Background Gradient */}
       <div className={`absolute inset-0 bg-gradient-to-br ${colors.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
