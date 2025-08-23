@@ -1,4 +1,6 @@
-export const fadeIn = (direction: string, type: string, delay: number, duration: number) => ({
+import { Variants } from 'framer-motion';
+
+export const fadeIn = (direction: string, type: 'tween' | 'spring', delay: number, duration: number): Variants => ({
   hidden: {
     x: direction === 'left' ? 100 : direction === 'right' ? -100 : 0,
     y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
@@ -17,7 +19,7 @@ export const fadeIn = (direction: string, type: string, delay: number, duration:
   },
 });
 
-export const staggerContainer = {
+export const staggerContainer: Variants = {
   hidden: {},
   show: {
     transition: {
@@ -27,7 +29,7 @@ export const staggerContainer = {
   },
 };
 
-export const slideIn = (direction: string, type: string, delay: number, duration: number) => ({
+export const slideIn = (direction: string, type: 'tween' | 'spring', delay: number, duration: number): Variants => ({
   hidden: {
     x: direction === 'left' ? '-100%' : direction === 'right' ? '100%' : 0,
     y: direction === 'up' ? '100%' : direction === 'down' ? '100%' : 0,
