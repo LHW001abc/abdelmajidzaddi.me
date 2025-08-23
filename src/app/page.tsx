@@ -329,29 +329,173 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services">
-        <div className="container px-6 py-10 mx-auto">
-          <h4 className="text-xl font-medium text-blue-500 dark:text-blue-400">Services</h4>
-          <Title>
-            Explore my services
-          </Title>
-          <p className="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
-            {`I offer a wide range of services to help you achieve your goals. I'm here to help you with your projects, whether you're a startup or a large company.`}
-          </p>
+      <section id="services" className="relative overflow-hidden bg-gradient-to-b from-gray-50/50 via-blue-50/30 to-indigo-50/20 dark:from-gray-900/50 dark:via-gray-800/30 dark:to-gray-700/20">
+        {/* Enhanced Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 via-indigo-50/15 to-purple-100/25 dark:from-blue-900/15 dark:via-indigo-900/10 dark:to-purple-900/15"></div>
+        
+        {/* Enhanced Floating Background Icons with better visibility */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Web Dev Icons */}
+          <div className="absolute top-32 left-16 opacity-15 dark:opacity-25 transform rotate-12">
+            <svg className="w-20 h-20 text-blue-500 animate-bounce" style={{animationDuration: '3s', animationDelay: '0s'}} fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8.5 12L4 7.5L5.5 6L11 11.5L5.5 17L4 15.5L8.5 12Z"/>
+              <path d="M15.5 12L20 16.5L18.5 18L13 12.5L18.5 7L20 8.5L15.5 12Z"/>
+            </svg>
+          </div>
+          
+          {/* AI/Neural Network Icon */}
+          <div className="absolute top-20 right-20 opacity-15 dark:opacity-25 transform -rotate-12">
+            <svg className="w-24 h-24 text-purple-500 animate-pulse" style={{animationDuration: '4s', animationDelay: '2s'}} fill="currentColor" viewBox="0 0 24 24">
+              <circle cx="7" cy="7" r="2" fillOpacity="0.6"/>
+              <circle cx="17" cy="7" r="2" fillOpacity="0.6"/>
+              <circle cx="12" cy="17" r="2" fillOpacity="0.6"/>
+              <circle cx="12" cy="12" r="1.5" fillOpacity="0.8"/>
+              <path d="M9 7L15 7M9.5 9L11 15M14.5 9L13 15M7 9L12 11M17 9L12 11M12 13L7 15M12 13L17 15" stroke="currentColor" strokeWidth="0.5" fill="none" opacity="0.7"/>
+            </svg>
+          </div>
+          
+          {/* Database/Cloud Icon */}
+          <div className="absolute bottom-32 left-24 opacity-15 dark:opacity-25 transform rotate-6">
+            <svg className="w-22 h-22 text-indigo-500 animate-bounce" style={{animationDuration: '5s', animationDelay: '4s'}} fill="currentColor" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="0.5">
+              <ellipse cx="12" cy="5" rx="9" ry="3" fillOpacity="0.6"/>
+              <path d="M3 5V19C3 20.7 7 22 12 22S21 20.7 21 19V5" fillOpacity="0.4"/>
+              <path d="M3 12C3 13.7 7 15 12 15S21 13.7 21 12" fillOpacity="0.5"/>
+            </svg>
+          </div>
+          
+          {/* Mobile/Device Icon */}
+          <div className="absolute bottom-40 right-32 opacity-15 dark:opacity-25 transform -rotate-6">
+            <svg className="w-16 h-16 text-cyan-500 animate-pulse" style={{animationDuration: '3s', animationDelay: '1s'}} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2" fill="currentColor" fillOpacity="0.2"/>
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+          </div>
+          
+          {/* Automation/Gear Icon */}
+          <div className="absolute top-80 left-1/3 opacity-15 dark:opacity-25 transform rotate-45">
+            <svg className="w-18 h-18 text-green-500" style={{animation: 'spin 8s linear infinite'}} fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5A3.5 3.5 0 0 1 15.5 12A3.5 3.5 0 0 1 12 15.5M19.43 12.98C19.47 12.66 19.5 12.34 19.5 12C19.5 11.66 19.47 11.34 19.43 11.02L21.54 9.37C21.73 9.22 21.78 8.95 21.66 8.73L19.66 5.27C19.54 5.05 19.27 4.97 19.05 5.05L16.56 6.05C16.04 5.65 15.48 5.32 14.87 5.07L14.49 2.42C14.46 2.18 14.25 2 14 2H10C9.75 2 9.54 2.18 9.51 2.42L9.13 5.07C8.52 5.32 7.96 5.66 7.44 6.05L4.95 5.05C4.72 4.96 4.46 5.05 4.34 5.27L2.34 8.73C2.21 8.95 2.27 9.22 2.46 9.37L4.57 11.02C4.53 11.34 4.5 11.67 4.5 12C4.5 12.33 4.53 12.66 4.57 12.98L2.46 14.63C2.27 14.78 2.21 15.05 2.34 15.27L4.34 18.73C4.46 18.95 4.72 19.03 4.95 18.95L7.44 17.95C7.96 18.35 8.52 18.68 9.13 18.93L9.51 21.58C9.54 21.82 9.75 22 10 22H14C14.25 22 14.46 21.82 14.49 21.58L14.87 18.93C15.48 18.68 16.04 18.34 16.56 17.95L19.05 18.95C19.28 19.04 19.54 18.95 19.66 18.73L21.66 15.27C21.78 15.05 21.73 14.78 21.54 14.63L19.43 12.98Z" fillOpacity="0.3"/>
+            </svg>
+          </div>
+          
+          {/* Code brackets scattered around */}
+          <div className="absolute top-96 right-16 opacity-10 dark:opacity-20">
+            <span className="text-4xl font-bold text-blue-400 animate-pulse" style={{animationDelay: '3s'}}>{'{ }'}</span>
+          </div>
+          
+          <div className="absolute bottom-80 left-40 opacity-10 dark:opacity-20">
+            <span className="text-3xl font-bold text-purple-400 animate-pulse" style={{animationDelay: '5s'}}>{'< />'}</span>
+          </div>
+          
+          {/* Enhanced decorative dots */}
+          <div className="absolute top-16 right-32 w-3 h-3 bg-blue-400 rounded-full opacity-40 animate-ping"></div>
+          <div className="absolute bottom-24 left-16 w-4 h-4 bg-purple-400 rounded-full opacity-30 animate-ping" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-indigo-400 rounded-full opacity-50 animate-ping" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-green-400 rounded-full opacity-40 animate-ping" style={{animationDelay: '4s'}}></div>
+        </div>
+        
+        {/* Gradient Orbs */}
+        <div className="absolute top-20 right-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl glow-pulse-animation"></div>
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-indigo-400/10 rounded-full blur-3xl glow-pulse-animation" style={{animationDelay: '2s'}}></div>
+        
+        <div className="container px-6 py-20 mx-auto relative z-10">
+          {/* Enhanced Header */}
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100/80 dark:bg-blue-900/30 rounded-full mb-6">
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium text-blue-600 dark:text-blue-400">Available for new projects</span>
+            </div>
+            
+            <h4 className="text-xl font-medium text-blue-500 dark:text-blue-400 mb-2">Services</h4>
+            <div className="relative inline-block">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                Explore my <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">services</span>
+              </h2>
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-full"></div>
+            </div>
+            
+            <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Transform your ideas into reality with cutting-edge solutions. From AI-powered applications to scalable web platforms, I deliver excellence that drives results.
+            </p>
+            
+            {/* Service Categories */}
+            <div className="flex flex-wrap justify-center gap-3 mt-8">
+              <span className="px-4 py-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-md rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 border border-white/20 dark:border-gray-700/50">
+                🚀 Web Development
+              </span>
+              <span className="px-4 py-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-md rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 border border-white/20 dark:border-gray-700/50">
+                🤖 AI & Machine Learning
+              </span>
+              <span className="px-4 py-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-md rounded-full text-sm font-medium text-gray-700 dark:text-gray-300 border border-white/20 dark:border-gray-700/50">
+                ⚡ Automation Solutions
+              </span>
+            </div>
+          </motion.div>
 
+          {/* Services Grid */}
           {servicesLoading ? (
-            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-8 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
               <CardSkeleton type="web" />
               <CardSkeleton type="ai" />
               <CardSkeleton type="computer-vision" />
             </div>
           ) : (
-            <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <motion.div 
+              variants={staggerContainer}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.25 }}
+              className="grid grid-cols-1 gap-8 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
+            >
               {services.map((service: ServiceProps, index: number) => (
-                <Service key={index} data={service}/>
+                <motion.div
+                  key={index}
+                  variants={fadeIn('up', 'spring', index * 0.15, 0.75)}
+                >
+                  <Service data={service} />
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           )}
+          
+          {/* CTA Section */}
+          <motion.div 
+            className="mt-20 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-white/40 dark:bg-gray-800/40 backdrop-blur-md rounded-3xl p-8 border border-white/20 dark:border-gray-700/30 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                Ready to start your project?
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Let&apos;s discuss how I can help bring your vision to life with innovative solutions tailored to your needs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="px-8 py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white rounded-xl font-medium hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-0.5"
+                >
+                  Get Started
+                </button>
+                <button 
+                  onClick={() => scrollToSection('work')}
+                  className="px-8 py-3 bg-white/60 dark:bg-gray-800/60 backdrop-blur-md text-gray-700 dark:text-gray-300 rounded-xl font-medium border border-white/20 dark:border-gray-700/50 hover:bg-white/80 dark:hover:bg-gray-800/80 transition-all duration-300"
+                >
+                  View Portfolio
+                </button>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 

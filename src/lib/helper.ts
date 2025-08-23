@@ -5,7 +5,13 @@
 export const scrollToSection = (id: string) => {
   const section = document.getElementById(id)
   if (section) {
-    section.scrollIntoView({ behavior: "smooth" })
+    const headerHeight = 80; // Account for sticky header
+    const sectionTop = section.offsetTop - headerHeight;
+    
+    window.scrollTo({
+      top: sectionTop,
+      behavior: "smooth"
+    });
   }
   else {
     window.location.href = `/#${id}`

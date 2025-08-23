@@ -119,7 +119,7 @@ const Header = () => {
               <div key={index} className="relative group lg:mx-4">
                 <span 
                   onClick={() => {
-                    scrollToSection(item.href);
+                    scrollToSection(item.link);
                     setOpen(false);
                   }}
      

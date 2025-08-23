@@ -91,6 +91,8 @@ export interface ServiceProps {
   features: string[];
   icon: string;
   tags: string[];
+  duration?: string;
+  complexity?: 'low' | 'medium' | 'high';
 }
 
 /**

@@ -2,7 +2,7 @@
   {
     "name": "Custom Web Application Development",
     "slug": "web-development",
-    "excerpt": "Creating tailored web solutions to meet your business needs.",
+    "excerpt": "Creating tailored web solutions to meet your business needs with modern frameworks and responsive design.",
     "overview": "I specialize in building high-performance web applications using modern frameworks and technologies. Whether you're looking for a simple website or a complex platform, I provide custom development solutions that are responsive, scalable, and secure.",
     "features": [
       "Responsive design for all devices",
@@ -11,12 +11,14 @@
       "Full-stack development using modern frameworks"
     ],
     "icon": "/icons/web-development.png",
-    "tags": ["web", "full-stack"]
+    "tags": ["web", "frontend", "fullstack"],
+    "duration": "2-8 weeks",
+    "complexity": "medium"
   },
   {
     "name": "Custom AI/ML Model Development",
     "slug": "ai-ml-development",
-    "excerpt": "Developing tailored AI/ML models for your specific business needs.",
+    "excerpt": "Developing tailored AI/ML models for your specific business needs with cutting-edge machine learning techniques.",
     "overview": "I design and implement custom machine learning and AI models that drive innovation and efficiency. From predictive analytics to recommendation systems, I offer solutions that are both effective and adaptable to your unique requirements.",
     "features": [
       "Custom AI/ML model design",
@@ -26,12 +28,14 @@
       "Performance monitoring and optimization"
     ],
     "icon": "/icons/ai-ml-development.svg",
-    "tags": ["ai", "ml"]
+    "tags": ["ai", "ml", "custom"],
+    "duration": "4-12 weeks",
+    "complexity": "high"
   },
   {
     "name": "Natural Language Processing (NLP) Solutions",
     "slug": "nlp-solutions",
-    "excerpt": "Leveraging NLP to make sense of unstructured data and enhance user interactions.",
+    "excerpt": "Leveraging NLP to make sense of unstructured data and enhance user interactions with intelligent language processing.",
     "overview": "I develop NLP-powered solutions, including chatbots, text analysis tools, and sentiment analysis systems. These applications enable businesses to better understand and interact with their customers through intelligent language processing.",
     "features": [
       "Text classification and sentiment analysis",
@@ -41,12 +45,14 @@
       "Machine translation"
     ],
     "icon": "/icons/nlp-solutions.svg",
-    "tags": ["nlp", "ai"]
+    "tags": ["nlp", "ai", "chatbot"],
+    "duration": "3-10 weeks",
+    "complexity": "high"
   },
   {
     "name": "Computer Vision Projects",
     "slug": "computer-vision",
-    "excerpt": "Empowering applications with visual data processing and analysis.",
+    "excerpt": "Empowering applications with visual data processing and analysis using advanced computer vision algorithms.",
     "overview": "I create computer vision solutions that analyze and interpret visual data. From object detection to image recognition, these systems are designed to meet your specific needs, ensuring accuracy and reliability.",
     "features": [
       "Object detection and tracking",
@@ -56,12 +62,14 @@
       "Integration with IoT devices"
     ],
     "icon": "/icons/computer-vision.svg",
-    "tags": ["computer-vision", "ai"]
+    "tags": ["computer-vision", "ai", "detection"],
+    "duration": "4-12 weeks",
+    "complexity": "high"
   },
   {
     "name": "Speech Recognition and Voice Applications",
     "slug": "speech-recognition",
-    "excerpt": "Enhancing applications with voice-enabled technologies.",
+    "excerpt": "Enhancing applications with voice-enabled technologies and advanced speech recognition systems.",
     "overview": "I build voice-enabled applications, including speech recognition and voice assistants, to improve user experience and accessibility. These solutions leverage cutting-edge algorithms for accurate and efficient voice interaction.",
     "features": [
       "Speech-to-text applications",
@@ -71,12 +79,14 @@
       "Multi-language support"
     ],
     "icon": "/icons/speech-recognition.svg",
-    "tags": ["speech", "ai"]
+    "tags": ["speech", "ai", "voice"],
+    "duration": "3-8 weeks",
+    "complexity": "medium"
   },
   {
     "name": "Automation with AI",
     "slug": "ai-automation",
-    "excerpt": "Streamlining business processes with AI-driven automation.",
+    "excerpt": "Streamlining business processes with AI-driven automation solutions that enhance efficiency and reduce costs.",
     "overview": "I provide AI-powered automation solutions that enhance efficiency and reduce costs. From automating routine tasks to developing intelligent workflows, I ensure your business can focus on what matters most.",
     "features": [
       "Workflow automation",
@@ -86,6 +96,8 @@
       "Integration with existing tools"
     ],
     "icon": "/icons/ai-automation.svg",
-    "tags": ["automation", "ai"]
+    "tags": ["automation", "ai", "workflow"],
+    "duration": "2-6 weeks",
+    "complexity": "medium"
   }
 ]

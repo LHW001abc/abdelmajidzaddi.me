@@ -32,7 +32,7 @@ export const resumes = {
 
 export const contact = {
   email: "abdelmajidzaddi088@gmail.com",
-  phone: "+212634707974",
+  phone: "+212695557631",
   address: "Mohammedia, Casablanca-Settat, Morocco",
 }
 
