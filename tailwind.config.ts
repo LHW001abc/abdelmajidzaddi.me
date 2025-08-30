@@ -10,6 +10,10 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['var(--font-nunito)', 'Inter', 'system-ui', 'sans-serif'],
+        'nunito': ['var(--font-nunito)', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

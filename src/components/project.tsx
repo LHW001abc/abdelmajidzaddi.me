@@ -3,95 +3,232 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from 'next/image';
 
-const Project = ({ data: project }: { data: ProjectProps }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  
+// A simple utility to conditionally join class names, similar to the 'clsx' library.
+const clsx = (...args: (string | boolean | undefined | null)[]): string => 
+  args.filter(Boolean).join(' ');
+
+// The MagicContainer component creates a container with a glowing border effect that follows the mouse.
+interface MagicContainerProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const MagicContainer: React.FC<MagicContainerProps> = ({ children, className }) => {
+  const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = React.useState(false);
+  const containerRef = React.useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return;
+    const rect = containerRef.current.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
   return (
-    <div 
-      className="w-full bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-gray-900 
-                rounded-lg overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-blue-300/30 dark:hover:shadow-blue-500/20 
-                transition-all duration-500 ease-in-out transform hover:-translate-y-2 flex flex-col"
+    <div
+      ref={containerRef}
+      className={clsx(
+        'relative rounded-3xl p-[1px] transition-all duration-300',
+        className
+      )}
+      style={{
+        background: isHovered
+          ? `radial-gradient(350px circle at ${mousePos.x}px ${mousePos.y}px, #9E7AFF, #38bdf8, #FF5C5C, #FE8BBB, transparent 80%)`
+          : 'rgba(255, 255, 255, 0.05)', // Faint border for non-hovered state
+      }}
+      onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Image with overlay effect */}
-      <div className="relative overflow-hidden">
-        <Link href={`/projects/${project.slug}`}>
-          <div className="relative">
-            <Image
-              className={`object-cover object-center w-full h-56 rounded-t-lg transition-transform duration-700 ease-in-out ${isHovered ? 'scale-110' : 'scale-100'}`}
-              src={project.image}
-              alt={project.title}
-              loading="lazy"
-              width={400}
-              height={256}
-            />
-            <div className={`absolute inset-0 bg-gradient-to-t from-blue-500/50 to-transparent opacity-0 transition-opacity duration-500 ${isHovered ? 'opacity-70' : ''}`}></div>
-            
-            {/* View project overlay */}
-            <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-500 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-              <span className="px-4 py-2 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 rounded-full font-medium shadow-lg transform transition-transform duration-500 hover:scale-105">
-                View Project
-              </span>
+      {children}
+    </div>
+  );
+};
+
+// Heart/Like Icon Component
+const HeartIcon = ({
+  size = 24,
+  width,
+  height,
+  strokeWidth = 1.5,
+  fill = "none",
+  ...props
+}: {
+  size?: number;
+  width?: number;
+  height?: number;
+  strokeWidth?: number;
+  fill?: string;
+  [key: string]: any;
+}) => {
+  return (
+    <svg
+      aria-hidden="true"
+      fill={fill}
+      focusable="false"
+      height={size || height}
+      role="presentation"
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+    >
+      <path
+        d="M12.62 20.81C12.28 20.93 11.72 20.93 11.38 20.81C8.48 19.82 2 15.69 2 8.68998C2 5.59998 4.49 3.09998 7.56 3.09998C9.38 3.09998 10.99 3.97998 12 5.33998C13.01 3.97998 14.63 3.09998 16.44 3.09998C19.51 3.09998 22 5.59998 22 8.68998C22 15.69 15.52 19.82 12.62 20.81Z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  );
+};
+
+// Eye/View Icon Component
+const EyeIcon = ({
+  size = 24,
+  width,
+  height,
+  strokeWidth = 1.5,
+  ...props
+}: {
+  size?: number;
+  width?: number;
+  height?: number;
+  strokeWidth?: number;
+  [key: string]: any;
+}) => {
+  return (
+    <svg
+      aria-hidden="true"
+      fill="none"
+      focusable="false"
+      height={size || height}
+      role="presentation"
+      viewBox="0 0 24 24"
+      width={size || width}
+      {...props}
+    >
+      <path
+        d="M15.58 12C15.58 13.98 13.98 15.58 12 15.58C10.02 15.58 8.42001 13.98 8.42001 12C8.42001 10.02 10.02 8.42 12 8.42C13.98 8.42 15.58 10.02 15.58 12Z"
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12 20.27C15.53 20.27 18.82 18.19 21.11 14.59C22.01 13.18 22.01 10.81 21.11 9.4C18.82 5.8 15.53 3.72 12 3.72C8.47 3.72 5.18 5.8 2.89 9.4C1.99 10.81 1.99 13.18 2.89 14.59C5.18 18.19 8.47 20.27 12 20.27Z"
+        stroke="currentColor"
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+const Project = ({ data: project }: { data: ProjectProps }) => {
+  const [liked, setLiked] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <MagicContainer className="w-full">
+      <div
+        className="w-full bg-white/60 dark:bg-gray-800/50 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="grid grid-cols-6 md:grid-cols-12 gap-6 md:gap-4 items-center justify-center p-6">
+          {/* Project Image */}
+          <div className="relative col-span-6 md:col-span-4">
+            <Link href={`/projects/${project.slug}`}>
+              <div className="relative overflow-hidden rounded-lg">
+                <Image
+                  alt={project.title}
+                  className={`object-cover w-full h-48 md:h-56 transition-transform duration-500 shadow-md ${isHovered ? 'scale-105' : 'scale-100'}`}
+                  height={200}
+                  src={project.image}
+                  width={400}
+                />
+                <div className={`absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 transition-opacity duration-300 ${isHovered ? 'opacity-100' : ''}`}></div>
+                
+                {/* View Project Overlay */}
+                <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm text-gray-900 dark:text-white rounded-full font-medium shadow-lg">
+                    <EyeIcon size={16} width={16} height={16} />
+                    <span>View Project</span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Project Details */}
+          <div className="flex flex-col col-span-6 md:col-span-8">
+            <div className="flex justify-between items-start">
+              <div className="flex flex-col gap-0">
+                <div className="flex items-center gap-2 mb-2">
+                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-full text-xs font-medium">
+                    {project.category}
+                  </span>
+                </div>
+                <Link href={`/projects/${project.slug}`} className="group">
+                  <h3 className="font-semibold text-gray-900 dark:text-white text-lg group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {project.title}
+                  </h3>
+                </Link>
+                <p className="text-small text-gray-600 dark:text-gray-300 mt-1">
+                  {project.excerpt}
+                </p>
+              </div>
+
+              {/* Like Button */}
+              <button
+                className="text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-full transition-colors -translate-y-2 translate-x-2"
+                onClick={() => setLiked((v) => !v)}
+              >
+                <HeartIcon
+                  className={liked ? "[&>path]:stroke-transparent" : ""}
+                  fill={liked ? "currentColor" : "none"}
+                  size={20}
+                  width={20}
+                  height={20}
+                />
+              </button>
+            </div>
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2 mt-4">
+              {project.tags.slice(0, 3).map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-xs font-medium transition-all duration-300 hover:bg-blue-100 dark:hover:bg-blue-900/30 hover:text-blue-700 dark:hover:text-blue-300"
+                >
+                  {tag}
+                </span>
+              ))}
+              {project.tags.length > 3 && (
+                <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-full text-xs font-medium">
+                  +{project.tags.length - 3} more
+                </span>
+              )}
+            </div>
+
+            {/* View Project Button */}
+            <div className="mt-4">
+              <Link href={`/projects/${project.slug}`}>
+                <button className="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-300 flex items-center justify-center gap-2">
+                  <EyeIcon size={16} width={16} height={16} />
+                  View Details
+                </button>
+              </Link>
             </div>
           </div>
-        </Link>
-      </div>
-      
-      {/* Category banner with icon */}
-      <div className="w-full flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 dark:from-blue-700 dark:to-indigo-800">
-        <svg
-          aria-label="headphones icon"
-          className="w-6 h-6 text-white fill-current"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M17 21C15.8954 21 15 20.1046 15 19V15C15 13.8954 15.8954 13 17 13H19V12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12V13H7C8.10457 13 9 13.8954 9 15V19C9 20.1046 8.10457 21 7 21H3V12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12V21H17ZM19 15H17V19H19V15ZM7 15H5V19H7V15Z"
-          />
-        </svg>
-        <h1 className="mx-3 text-lg font-semibold text-white">{project.category}</h1>
-      </div>
-      
-      {/* Project content */}
-      <div className="w-full flex flex-col px-6 py-4 flex-1 relative">
-        {/* Background decoration */}
-        <div className="absolute -right-6 -bottom-6 w-24 h-24 bg-blue-200/20 dark:bg-blue-400/10 rounded-full blur-xl opacity-0 transition-opacity duration-500" style={{ opacity: isHovered ? 0.7 : 0 }}></div>
-        
-        {/* Title with animated underline */}
-        <Link href={`/projects/${project.slug}`} className="block group relative z-10">
-          <h1 className="text-xl font-semibold text-gray-800 dark:text-white transition-colors duration-300 group-hover:text-blue-600 dark:group-hover:text-blue-400">
-            {project.title}
-          </h1>
-          <span className={`block h-0.5 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full transition-all duration-500 ${isHovered ? 'w-1/3 opacity-100' : 'w-0 opacity-0'}`}></span>
-        </Link>
-        
-        {/* Project excerpt */}
-        <p className="py-2 text-gray-700 dark:text-gray-400 relative z-10">{project.excerpt}</p>
-        
-        {/* Tags */}
-        <div className="mt-auto flex flex-wrap gap-1.5 justify-end relative z-10">
-          {project.tags.map((tag, index) => (
-            <div
-              key={index}
-              className={`
-                bg-blue-200 dark:bg-gray-700 text-blue-800 dark:text-blue-200 
-                px-3 py-1 rounded-full text-xs font-medium
-                transition-all duration-300
-                ${isHovered ? 'transform scale-105' : ''}
-                hover:bg-blue-300 dark:hover:bg-blue-700
-              `}
-              style={{ transitionDelay: `${index * 50}ms` }}
-            >
-              {tag}
-            </div>
-          ))}
         </div>
       </div>
-    </div>
+    </MagicContainer>
   );
 };
 
