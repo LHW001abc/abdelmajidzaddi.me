@@ -62,8 +62,7 @@ const HeartIcon = ({
   height?: number;
   strokeWidth?: number;
   fill?: string;
-  [key: string]: any;
-}) => {
+} & React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       aria-hidden="true"
@@ -98,8 +97,7 @@ const EyeIcon = ({
   width?: number;
   height?: number;
   strokeWidth?: number;
-  [key: string]: any;
-}) => {
+} & React.SVGProps<SVGSVGElement>) => {
   return (
     <svg
       aria-hidden="true"
