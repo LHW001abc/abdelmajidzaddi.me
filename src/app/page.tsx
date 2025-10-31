@@ -28,6 +28,7 @@ import DownloadResumeModal from "@/components/DownloadResumeModal";
 import AnimatedTechnologies from "@/components/AnimatedTechnologies";
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer } from "@/lib/animations"; // Create this file for reusable animations
+import ModelViewer from "@/components/ModelViewer";
 
 export default function Home() {
 
@@ -741,6 +742,50 @@ export default function Home() {
           </div>
           <div className="p-4 py-6 rounded-lg bg-gray-50 dark:bg-gray-800 md:p-8">
             <ContactForm/>
+          </div>
+        </div>
+      </section>
+
+      {/* Full Width Interactive 3D Model Section */}
+      <section id="3d-showcase" className="relative w-full h-screen bg-gradient-to-br from-gray-50 via-blue-50/20 to-indigo-50/30 dark:from-gray-900 dark:via-blue-900/10 dark:to-indigo-900/20">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/5 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/5 rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        </div>
+
+        {/* 3D Model Viewer - Full Width */}
+        <div className="w-full h-full">
+          <ModelViewer
+            url="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Models/main/2.0/ToyCar/glTF-Binary/ToyCar.glb"
+            width="100%"
+            height="100%"
+            autoRotate={true}
+            autoRotateSpeed={0.5}
+            fadeIn={true}
+            environmentPreset="sunset"
+            enableManualRotation={true}
+            enableHoverRotation={true}
+            enableMouseParallax={true}
+            showScreenshotButton={false}
+            ambientIntensity={0.4}
+            keyLightIntensity={1.2}
+            fillLightIntensity={0.6}
+            defaultRotationX={-20}
+            defaultRotationY={45}
+          />
+        </div>
+
+        {/* Floating Instruction Badge */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+          <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-md px-6 py-3 rounded-full shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300 flex items-center gap-3">
+              <span className="text-lg">🖱️</span>
+              <span>Drag to rotate</span>
+              <span className="text-gray-400">•</span>
+              <span className="text-lg">🔍</span>
+              <span>Scroll to zoom</span>
+            </p>
           </div>
         </div>
       </section>
