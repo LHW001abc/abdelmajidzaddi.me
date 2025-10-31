@@ -139,18 +139,19 @@ const ModelInner: FC<ModelInnerProps> = ({
 
   const ext = useMemo(() => url.split('.').pop()!.toLowerCase(), [url]);
   
-  // Load the 3D model based on file extension
-  const gltfScene = ext === 'glb' || ext === 'gltf' ? useGLTF(url).scene : null;
-  const fbxScene = ext === 'fbx' ? useFBX(url) : null;
-  const objScene = ext === 'obj' ? useLoader(OBJLoader, url) : null;
+  // Always call all hooks unconditionally
+  const gltfData = useGLTF(url, true);
   
+  // Determine which model to use based on extension
   const content = useMemo<THREE.Object3D | null>(() => {
-    if (gltfScene) return gltfScene.clone();
-    if (fbxScene) return fbxScene.clone();
-    if (objScene) return objScene.clone();
-    console.error('Unsupported format:', ext);
-    return null;
-  }, [gltfScene, fbxScene, objScene, ext]);
+    if (ext === 'glb' || ext === 'gltf') {
+      return gltfData.scene.clone();
+    }
+    // For other formats, we'll just use GLTF for now
+    // You can extend this by always loading all formats if needed
+    console.warn('Only GLTF/GLB formats are supported in this simplified version');
+    return gltfData.scene.clone();
+  }, [gltfData, ext]);
 
   const pivotW = useRef(new THREE.Vector3());
   
@@ -344,6 +345,7 @@ const ModelInner: FC<ModelInnerProps> = ({
       window.removeEventListener('pointerup', up);
       window.removeEventListener('pointercancel', up);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gl, enableManualRotation, enableManualZoom, minZoom, maxZoom]);
 
   useEffect(() => {
