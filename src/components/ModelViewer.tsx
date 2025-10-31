@@ -1,8 +1,9 @@
-import { FC, Suspense, useRef, useLayoutEffect, useEffect, useMemo } from 'react';
+import { FC, Suspense, useRef, useLayoutEffect, useEffect, useMemo, useCallback } from 'react';
 import { Canvas, useFrame, useLoader, useThree, invalidate } from '@react-three/fiber';
 import { OrbitControls, useGLTF, useFBX, useProgress, Html, Environment, ContactShadows } from '@react-three/drei';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import * as THREE from 'three';
+import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib';
 
 const isMeshObject = (object: THREE.Object3D): object is THREE.Mesh => {
   return 'isMesh' in object && object.isMesh === true;
@@ -57,7 +58,8 @@ const Loader: FC<{ placeholderSrc?: string }> = ({ placeholderSrc }) => {
   return (
     <Html center>
       {placeholderSrc ? (
-        <img src={placeholderSrc} width={128} height={128} style={{ filter: 'blur(8px)', borderRadius: 8 }} />
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={placeholderSrc} alt="Loading model" width={128} height={128} style={{ filter: 'blur(8px)', borderRadius: 8 }} />
       ) : (
         `${Math.round(progress)} %`
       )}
@@ -71,7 +73,7 @@ const DesktopControls: FC<{
   max: number;
   zoomEnabled: boolean;
 }> = ({ pivot, min, max, zoomEnabled }) => {
-  const ref = useRef<any>(null);
+  const ref = useRef<OrbitControlsImpl>(null);
   useFrame(() => ref.current?.target.copy(pivot));
   return (
     <OrbitControls
@@ -136,15 +138,26 @@ const ModelInner: FC<ModelInnerProps> = ({
   const cHov = useRef({ x: 0, y: 0 });
 
   const ext = useMemo(() => url.split('.').pop()!.toLowerCase(), [url]);
+  
+  // Load the 3D model based on file extension
+  const gltfScene = ext === 'glb' || ext === 'gltf' ? useGLTF(url).scene : null;
+  const fbxScene = ext === 'fbx' ? useFBX(url) : null;
+  const objScene = ext === 'obj' ? useLoader(OBJLoader, url) : null;
+  
   const content = useMemo<THREE.Object3D | null>(() => {
-    if (ext === 'glb' || ext === 'gltf') return useGLTF(url).scene.clone();
-    if (ext === 'fbx') return useFBX(url).clone();
-    if (ext === 'obj') return useLoader(OBJLoader, url).clone();
+    if (gltfScene) return gltfScene.clone();
+    if (fbxScene) return fbxScene.clone();
+    if (objScene) return objScene.clone();
     console.error('Unsupported format:', ext);
     return null;
-  }, [url, ext]);
+  }, [gltfScene, fbxScene, objScene, ext]);
 
   const pivotW = useRef(new THREE.Vector3());
+  
+  const onLoadedCallback = useCallback(() => {
+    onLoaded?.();
+  }, [onLoaded]);
+  
   useLayoutEffect(() => {
     if (!content) return;
     const g = inner.current;
@@ -200,12 +213,12 @@ const ModelInner: FC<ModelInnerProps> = ({
         invalidate();
         if (v === 1) {
           clearInterval(id);
-          onLoaded?.();
+          onLoadedCallback();
         }
       }, 16);
       return () => clearInterval(id);
-    } else onLoaded?.();
-  }, [content]);
+    } else onLoadedCallback();
+  }, [content, autoFrame, camera, fadeIn, initPitch, initYaw, pivot, onLoadedCallback]);
 
   useEffect(() => {
     if (!enableManualRotation || isTouch) return;
@@ -263,7 +276,9 @@ const ModelInner: FC<ModelInnerProps> = ({
         sy = ly = e.clientY;
       } else if (pts.size === 2 && enableManualZoom) {
         mode = 'pinch';
-        const [p1, p2] = [...pts.values()];
+        const ptsArray = Array.from(pts.values());
+        const p1 = ptsArray[0];
+        const p2 = ptsArray[1];
         startDist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
         startZ = camera.position.z;
         e.preventDefault();
@@ -303,7 +318,9 @@ const ModelInner: FC<ModelInnerProps> = ({
         invalidate();
       } else if (mode === 'pinch' && pts.size === 2) {
         e.preventDefault();
-        const [p1, p2] = [...pts.values()];
+        const ptsArray = Array.from(pts.values());
+        const p1 = ptsArray[0];
+        const p2 = ptsArray[1];
         const d = Math.hypot(p1.x - p2.x, p1.y - p2.y);
         const ratio = startDist / d;
         camera.position.z = THREE.MathUtils.clamp(startZ * ratio, minZoom, maxZoom);
@@ -423,9 +440,9 @@ const ModelViewer: FC<ViewerProps> = ({
   useEffect(() => void useGLTF.preload(url), [url]);
   const pivot = useRef(new THREE.Vector3()).current;
   const contactRef = useRef<THREE.Mesh>(null);
-  const rendererRef = useRef<THREE.WebGLRenderer>(null);
-  const sceneRef = useRef<THREE.Scene>(null);
-  const cameraRef = useRef<THREE.Camera>(null);
+  const rendererRef = useRef<THREE.WebGLRenderer | null>(null);
+  const sceneRef = useRef<THREE.Scene | null>(null);
+  const cameraRef = useRef<THREE.Camera | null>(null);
 
   const initYaw = deg2rad(defaultRotationX);
   const initPitch = deg2rad(defaultRotationY);
@@ -489,23 +506,23 @@ const ModelViewer: FC<ViewerProps> = ({
         frameloop="demand"
         gl={{ preserveDrawingBuffer: true }}
         onCreated={({ gl, scene, camera }) => {
-          rendererRef.current = gl;
-          sceneRef.current = scene;
-          cameraRef.current = camera;
+          if (rendererRef.current === null) rendererRef.current = gl;
+          if (sceneRef.current === null) sceneRef.current = scene;
+          if (cameraRef.current === null) cameraRef.current = camera;
           gl.toneMapping = THREE.ACESFilmicToneMapping;
           gl.outputColorSpace = THREE.SRGBColorSpace;
         }}
         camera={{ fov: 50, position: [0, 0, camZ], near: 0.01, far: 100 }}
         style={{ touchAction: 'pan-y pinch-zoom' }}
       >
-        {environmentPreset !== 'none' && <Environment preset={environmentPreset as any} background={false} />}
+        {environmentPreset !== 'none' && <Environment preset={environmentPreset} background={false} />}
 
         <ambientLight intensity={ambientIntensity} />
         <directionalLight position={[5, 5, 5]} intensity={keyLightIntensity} castShadow />
         <directionalLight position={[-5, 2, 5]} intensity={fillLightIntensity} />
         <directionalLight position={[0, 4, -5]} intensity={rimLightIntensity} />
 
-        <ContactShadows ref={contactRef as any} position={[0, -0.5, 0]} opacity={0.35} scale={10} blur={2} />
+        <ContactShadows ref={contactRef} position={[0, -0.5, 0]} opacity={0.35} scale={10} blur={2} />
 
         <Suspense fallback={<Loader placeholderSrc={placeholderSrc} />}>
           <ModelInner
